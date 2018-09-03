@@ -1,0 +1,37 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.footerContainer{
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-around);
+  @include align-items(center);
+  width: 100vw;
+  font-size: 1.4rem;
+  background-color: #222;
+  color: #fff;
+
+
+}
+
+.mapPanel{
+  margin-left: 5%;
+}
+.addressPanel{
+  margin-right: 1%;
+}
+.contactPanel{
+  width: 20%;
+  color: #fff;
+  margin-right: 5%;
+}
+
+.copyrightPanel{
+  font-size: 1rem;
+  font-weight: 300;
+  padding: .5rem 0;
+  background-color: #333333;
+  .copyrightCopy{
+    margin-left: 5.2%;
+  }
+}

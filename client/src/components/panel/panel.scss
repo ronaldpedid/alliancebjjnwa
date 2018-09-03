@@ -1,0 +1,38 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.panelContainer{
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  width: 50vw;
+  height:17rem;
+  border: 1px solid black;
+}
+
+.panel{
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  @include align-self(center);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.infoPanel{
+  @extend .panel;
+  font-size: 1.3rem;
+  
+
+  p{
+    text-transform: none;
+    margin: .1rem .2rem;
+    
+  }
+  .signup{
+    text-transform: uppercase;
+    padding-top: .5rem;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+
+.contentRowVideo{
+  @extend .contentRow;
+  @include justify-content(center);
+  padding: .6rem 0;
+  
+}
+
+.promoVideo{
+  margin-right: 1.4rem;
+}

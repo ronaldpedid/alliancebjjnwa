@@ -1,0 +1,36 @@
+@mixin display($type){
+  display: $type
+}
+
+@mixin flex-direction($direction){
+  flex-direction: $direction;
+}
+@mixin flex-basis($percentage){
+  flex-basis: $percentage;
+}
+
+@mixin justify-content ($align){
+  justify-content: $align;
+}
+
+@mixin align-items ($align){
+  align-items: $align;
+}
+
+@mixin align-self ($align){
+  align-self: $align;
+}
+
+.backgroundLanding{
+  @include display(flex);
+  @include flex-direction(column);
+}
+
+.contentRow{
+  @include display(flex);
+  @include flex-direction(row);
+}
+.contentColumn{
+  @include display(flex);
+  @include flex-direction(column);
+}

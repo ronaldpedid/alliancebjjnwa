@@ -1,0 +1,94 @@
+.flex, .navigationContainer, .navigationContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row, .navigationContainer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.basis--100 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: orangered !important;
+}
+
+button:active {
+  background-color: purple;
+}
+
+button:link {
+  background-color: transparent;
+}
+
+button:disabled {
+  background-color: #444444;
+}
+
+.navigationContainer {
+  font-family: 'Walter Turncoat', cursive;
+  background-color: transparent;
+  width: 100vw;
+  font-size: 4rem;
+  background-color: #222222;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigationContainer a {
+  color: orange;
+}
+
+.navigationContainer ul {
+  list-style-type: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navigationContainer ul li:nth-child(2) {
+  margin: 0 1rem;
+}
+
+.navigationContainer ul .new {
+  margin-left: 1rem;
+}
+/*# sourceMappingURL=navigation.css.map */

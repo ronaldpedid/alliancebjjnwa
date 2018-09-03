@@ -1,0 +1,21 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.heroContainer{
+  width: 100vw;
+  height: 30rem;
+  background-image: url('/src/assets/images/backgrounds/abstract-art-black.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.instructorContainer{
+  @extend .heroContainer;
+  background-image: url('/src/assets/images/backgrounds/abstract-art-sparkle.jpg');
+
+}
+
+.contactContainer{
+  @extend .heroContainer;
+  background-image: url('/src/assets/images/backgrounds/abstract-art-artistic.jpg');
+}

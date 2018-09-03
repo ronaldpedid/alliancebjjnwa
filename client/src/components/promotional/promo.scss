@@ -1,0 +1,19 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.promoContainer{
+  @include display(flex);
+  width: 100vw;
+  height: 15rem;
+  background-image: url('/src/assets/images/backgrounds/abstract-art-sparkle.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.promoCopy{
+  @include align-self(center);
+  color: #fff;
+  font-size: 2.2rem;
+  width: 50%;
+  text-align: center;
+}

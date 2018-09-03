@@ -1,0 +1,27 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.navigationContainer{
+  @include display(flex);
+  @include flex-direction(row);
+  background-color: transparent;
+  width: 100vw;
+  font-size: 1.1rem;
+  background-color: #4e4e4e;
+  padding: .5rem 0;
+  text-transform: uppercase;
+  a{
+    color: orange;
+    text-decoration: none;
+  }
+  ul{
+    @include display(flex);
+    @include flex-direction(row);
+    list-style-type: none;
+    margin-left: 5%;
+    li{
+      margin: 0 1rem;
+      
+    }
+  }
+}

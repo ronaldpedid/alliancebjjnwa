@@ -1,0 +1,42 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+
+ .label{
+   font-size: 1rem;
+ }
+
+.input{
+  border: none;
+  border-bottom: 1px solid black;
+  width: 22rem;
+  :placeholder-shown{
+    padding: 2px;
+  }
+}
+.inputMessage{
+  @extend .input;
+  width: 98%;
+}
+.formRow{
+  @extend .contentRow;
+  width: 100%;
+
+}
+
+#email{
+  margin:0 1rem;
+}
+
+.formContainer{
+  margin-left: 5%;
+  padding: 2rem 0;
+}
+
+.contactBtn{
+  @include align-self(center);
+  border: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #000;
+}

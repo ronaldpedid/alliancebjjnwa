@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  font-family: 'Oswald', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+  @include display(block);
+  cursor: pointer;
+  background-color: transparent;
+  color: red;
+  font-weight: 700;
+  font-size: 1.9rem;
+
+  border-color: white; 
+  &:hover{
+    background-color: orangered !important;
+  }
+  &:active{
+    background-color: purple;
+  }
+  &:link{
+    background-color: transparent;
+  }
+  &:disabled{
+    background-color: #444444;
+  }
+}

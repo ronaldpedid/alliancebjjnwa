@@ -1,0 +1,14 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.backgroundLanding{
+  @include display(flex);
+  @include flex-direction(column);
+}
+
+
+.contentRow{
+  @include display(flex);
+  @include flex-direction(row);
+}
+
