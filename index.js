@@ -17,7 +17,6 @@ function initializeApp() {
     });
   }
 
-  app.use(express.static(__dirname, 'client', 'dist', 'public'));
 
   app.listen(PORT_ENV || PORT);
 
