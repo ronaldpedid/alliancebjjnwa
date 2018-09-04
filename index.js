@@ -17,8 +17,6 @@ function initializeApp() {
     });
   }
 
-  require('./routes/routes')(app);
-
 
   app.listen(PORT_ENV || PORT);
 
