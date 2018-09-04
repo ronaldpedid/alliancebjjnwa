@@ -7,7 +7,7 @@ function initializeApp() {
   let PORT = 8000;
   let PORT_ENV = process.env.PORT;
 
-  app.use('/dist', express.static('dist/public'))
+  app.use('/dist', express.static(__dirname, 'dist/public'))
 
   /* production only */
   if (process.env.NODE_ENV === 'production') {
