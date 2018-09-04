@@ -30,10 +30,10 @@ button{
 
   border-color: white; 
   &:hover{
-    background-color: orangered !important;
+    background-color: transparent;
   }
   &:active{
-    background-color: purple;
+    background-color: transparent;
   }
   &:link{
     background-color: transparent;

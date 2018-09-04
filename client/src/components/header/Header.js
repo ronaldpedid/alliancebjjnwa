@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import style from './header.scss'
+import { LogoRegular } from '../logo/Logo';
+
 
 
 export class Header extends Component {
@@ -7,6 +9,7 @@ export class Header extends Component {
     return (
       <div className={style.headerContainer}>
         <div className={style.logoContainer}>
+          <LogoRegular />
           <h1 className={style.logo}>ALLIANCE BJJ OF NWA</h1>
         </div>
         <div className={style.address}>

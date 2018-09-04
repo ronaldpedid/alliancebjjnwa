@@ -45,7 +45,7 @@ export class AdultPanel extends React.Component {
               <p>6pm-8pm Mon-Wed Gi</p>
               <p>6pm-8pm Thurs Nogi</p>
               <p>Learn to defend themselves, develop confidence and improve fitness. $1XX a month per student.</p>
-              <h6 className={style.signup}><a>Sign Up</a></h6>
+              <h6 className={style.signup}><a href="/contact">Sign Up</a></h6>
             </div></div>}
       </div>
     )

@@ -1,12 +1,10 @@
 function initializeApp() {
   const express = require('express');
   const app = express();
-
   const path = require('path');
 
   let PORT = 8000;
   let PORT_ENV = process.env.PORT;
-
 
 
   /* production only */
@@ -19,7 +17,6 @@ function initializeApp() {
       res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
     });
   }
-
 
   app.listen(PORT_ENV || PORT);
 

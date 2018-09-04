@@ -15,8 +15,12 @@
     font-weight: 600;
   }
   .logoContainer{
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
     margin-left: 5%;
     .logo{
+      margin-left: 1.5rem;
       font-size: 3rem;
       width: 18.75rem;
     }
