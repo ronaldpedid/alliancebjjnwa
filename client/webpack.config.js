@@ -13,12 +13,6 @@ module.exports = htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index'],
-
-  output: {
-    filename: 'index.bundle.js'
-  },
-
   module: {
     loaders: [
       { test: /\.jsx?$/, loader: 'babel', }
