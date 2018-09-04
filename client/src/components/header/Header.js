@@ -10,7 +10,7 @@ export class Header extends Component {
           <h1 className={style.logo}>ALLIANCE BJJ OF NWA</h1>
         </div>
         <div className={style.address}>
-          <h4><span className={style.bold}>OPEN</span> MONDAY TO FRIDAY 5AM TO 8PM</h4>
+          <h4><span className={style.bold}>OPEN</span> MONDAY TO THURSDAY 5PM TO 8PM</h4>
           <h3>1771 West Sunset Ave, Suite 2B, Springdale, Arkansas 555-434-3445</h3>
         </div>
 

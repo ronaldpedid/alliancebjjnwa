@@ -14,7 +14,8 @@ export class Contact extends Component {
         <ContactHero />
         <div className={style.contentColumn}>
           <div className={style.formContainer}>
-            <h1>Questions? Contact Us.</h1>
+            <h1 className={style.largeHeadline}>We ask that anyone looking to sign up for classes comes into the gym and take a free introduction class to see if Brazillian Jiu Jitsu is right for you.</h1>
+            <h2 className={style.smallHeadline}>Questions? Contact Us.</h2>
             <form className={style.contactForm} >
               <div className={style.formRow}>
                 <div className={style.contentColumn}>

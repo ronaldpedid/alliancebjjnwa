@@ -1,6 +1,5 @@
 node_modules
-keys
-
+dev.js
 # production
 /build
 

@@ -10,6 +10,9 @@
   border: none;
   border-bottom: 1px solid black;
   width: 22rem;
+  font-size: .9rem;
+  font-family: 'Oswald', sans-serif;
+  padding-left: .1rem;
   :placeholder-shown{
     padding: 2px;
   }
@@ -35,8 +38,21 @@
 
 .contactBtn{
   @include align-self(center);
+  font-family: 'Oswald', sans-serif;
   border: none;
   font-size: 1rem;
   margin-top: 1rem;
   color: #000;
+}
+
+.largeHeadline{
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.smallHeadline{
+  @extend .largeHeadline;
+  font-size: 1.2rem;
+  
 }
