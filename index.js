@@ -5,7 +5,7 @@ function initializeApp() {
   const path = require('path');
 
   let PORT = 8000;
-
+  let PORT_ENV = process.env.PORT;
 
   /* production only */
   if (process.env.NODE_ENV === 'production') {
@@ -24,7 +24,7 @@ function initializeApp() {
     res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
   });
 
-  app.listen(PORT || process.env.PORT);
+  app.listen(PORT_ENV || PORT);
 
 
   return app;
