@@ -16,6 +16,9 @@
   "author": "Ronald J. Pedid",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
     "file-loader": "^2.0.0",
     "node-sass": "^4.9.3",
     "react": "^16.4.2",

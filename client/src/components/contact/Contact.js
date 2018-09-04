@@ -4,23 +4,39 @@ import { Header } from '../header/Header';
 import { Navigation } from '../navigation/Navigation';
 import { ContactHero } from '../hero/Hero';
 import { Footer } from '../footer/Footer';
+import axios from 'axios';
 
 export class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+  async handleSubmit(e) {
+    e.preventDefault();
+    const { name, email, phone, message } = this.state;
+    console.log(name);
+    const form = await axios.post('/api/form', {
+      name,
+      email,
+      phone,
+      message
+    });
+    console.log(form);
+    alert('A name was submitted: ' + this.state.name);
+
   }
   render() {
     return (
@@ -36,23 +52,40 @@ export class Contact extends Component {
               <div className={style.formRow}>
                 <div className={style.contentColumn}>
                   <label className={style.label}>Name</label>
-                  <input type="text" className={style.input} value={this.value} />
+                  <input
+                    type="text"
+                    name="name"
+                    className={style.input}
+                    onChange={this.handleChange} />
                 </div>
                 <div id={style.email} className={style.contentColumn}>
                   <label className={style.label}>Email</label>
-                  <input type="email" className={style.input} value={this.value} />
+                  <input
+                    type="email"
+                    name="email"
+                    className={style.input}
+                    onChange={this.handleChange} />
                 </div>
                 <div className={style.contentColumn}>
                   <label className={style.label}>Phone Number</label>
-                  <input type="number" className={style.input} placeholder="(555)555-5352" value={this.value} />
+                  <input
+                    type="number"
+                    name="phone"
+                    className={style.input}
+                    placeholder="(555)555-5352"
+                    onChange={this.handleChange} />
                 </div>
               </div>
               <div className={style.contentColumn}>
                 <label className={style.label}>Message</label>
-                <input className={style.inputMessage} value={this.value} />
+                <input
+                  type="text"
+                  name="message"
+                  className={style.inputMessage}
+                  onChange={this.handleChange} />
               </div>
 
-              <button className={style.contactBtn} type="submit" value="submit">Send</button>
+              <button className={style.contactBtn} onSubmit={this.handleSubmit}>Send</button>
             </form>
           </div>
         </div>

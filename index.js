@@ -1,7 +1,58 @@
 function initializeApp() {
   const express = require('express');
-  const app = express();
+  const bodyParser = require('body-parser');
+  const nodemailer = require('nodemailer');
   const path = require('path');
+  const keys = require('./keys/keys');
+
+  const app = express();
+
+
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: false }))
+
+
+  app.post('/api/form', (res, req) => {
+    nodemailer.createTestAccount((err, account) => {
+      const htmlEmail = `
+      <h3>Contact Details</h3>
+      <ul>
+        <li>${req.body.name}</li>
+        <li>${req.body.email}</li>
+        <li>${req.body.phone}</li>
+        
+      </ul>
+      <h3>Message</h3>
+      <p>${req.body.message}</p>
+      `
+
+      let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        auth: {
+          user: 'elementfayt@gmail.com',
+          pass: keys.googleEmailPassword
+        }
+      })
+
+      let mailOptions = {
+        from: 'noreply@alliancebjjofnwa.com',
+        to: 'elementfayt@gmail.com',
+        replyTo: 'noreply@alliancebjjofnwa.com',
+        subject: 'New Message',
+        text: req.body.message,
+        html: htmlEmail
+      }
+
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log('Message Sent' % info.message);
+      })
+    })
+  });
 
   let PORT = 8000;
   let PORT_ENV = process.env.PORT;
@@ -18,7 +69,12 @@ function initializeApp() {
     });
   }
 
-  app.listen(PORT_ENV || PORT);
+
+
+
+  app.listen(PORT_ENV || PORT, function () {
+    console.log('port is currently running on ' + PORT);
+  });
 
 
   return app;
