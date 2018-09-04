@@ -17,8 +17,7 @@ function initializeApp() {
     });
   }
 
-  app.use(express.static('client/src'));
-  app.use(express.static('client/src/assets'));
+  app.use(express.static(__dirname + '/public'));
 
   app.listen(PORT_ENV || PORT);
 
