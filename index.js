@@ -11,6 +11,7 @@ function initializeApp() {
   if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets ie: main.css/main.js
     app.use(express.static('client/dist'));
+    app.use(express.static('client/src'));
     //express will serve up the index.html file if it doesn't recognize the route.
     app.get('/*', (req, res) => {
       res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
