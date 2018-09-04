@@ -1,19 +1,11 @@
 function initializeApp() {
   const express = require('express');
-  const config = require('./config');
-  const keys = require('../server/keys/dev');
-
-
   const app = express();
 
   const path = require('path');
 
-
-
-
   let PORT = 8000;
   let PORT_ENV = process.env.PORT;
-
 
   /* production only */
   if (process.env.NODE_ENV === 'production') {
@@ -25,11 +17,7 @@ function initializeApp() {
     });
   }
 
-  require('./routes/authRoutes')(app);
-
-
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
+  require('./routes/routes')(app);
 
 
   app.get('/', (req, res) => {
@@ -60,4 +48,5 @@ function initializeApp() {
   return app;
 }
 
+initializeApp();
 
