@@ -20,10 +20,6 @@ function initializeApp() {
   require('./routes/routes')(app);
 
 
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
-  });
-
   app.listen(PORT_ENV || PORT);
 
 
