@@ -7,6 +7,8 @@ function initializeApp() {
   let PORT = 8000;
   let PORT_ENV = process.env.PORT;
 
+  app.use('/dist', express.static('dist/public'))
+
   /* production only */
   if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets ie: main.css/main.js
