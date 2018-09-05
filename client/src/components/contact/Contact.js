@@ -27,16 +27,16 @@ export class Contact extends Component {
   async handleSubmit(e) {
     e.preventDefault();
     const { name, email, phone, message } = this.state;
-    console.log(name);
+    console.log('clicked');
     const form = await axios.post('/api/form', {
       name,
       email,
       phone,
       message
-    });
-    console.log(form);
-    alert('A name was submitted: ' + this.state.name);
-
+    }).catch((error) => {
+      const response = error.response
+      console.log(response.data.errors)
+    })
   }
   render() {
     return (
@@ -85,7 +85,7 @@ export class Contact extends Component {
                   onChange={this.handleChange} />
               </div>
 
-              <button className={style.contactBtn} onSubmit={this.handleSubmit}>Send</button>
+              <button className={style.contactBtn}>Send</button>
             </form>
           </div>
         </div>
