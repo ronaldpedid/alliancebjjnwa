@@ -8,6 +8,7 @@ import { AdultPanel } from '../panel/Adults';
 import { KidPanel } from '../panel/Kids';
 import { Promo } from '../promotional/Promo';
 import { Footer } from '../footer/Footer';
+import { Social } from '../social/Social';
 
 
 export class Landing extends Component {
@@ -23,6 +24,9 @@ export class Landing extends Component {
         </div>
         <div>
           <Promo />
+        </div>
+        <div>
+          <Social />
         </div>
         <div>
           <Footer />
