@@ -27,7 +27,6 @@ export class Contact extends Component {
   async handleSubmit(e) {
     e.preventDefault();
     const { name, email, phone, message } = this.state;
-    console.log('clicked');
     const form = await axios.post('/api/form', {
       name,
       email,

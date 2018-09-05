@@ -7,6 +7,23 @@ const keys = require('./keys/keys');
 
 const app = express();
 
+const GoogleAuth = require('google-auth-library');
+
+function authorize() {
+  return new Promise(resolve => {
+    const authFactory = new GoogleAuth();
+    const jwtClient = new authFactory.JWT(
+      process.env.GOOGLE_USER_NAME, // defined in Heroku
+      null,
+      process.env.GOOGLE_ENAIL_PASSWORD, // defined in Heroku
+      null,
+      process.env.GOOGLE_API_KEY, // defined in Heroku
+      ['https://www.googleapis.com/auth/maps']
+    );
+
+    jwtClient.authorize(() => resolve(jwtClient));
+  });
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -31,7 +48,7 @@ app.post('/api/form', (req, res) => {
       host: 'smtp.gmail.com',
       port: 465,
       auth: {
-        user: 'elementfayt@gmail.com',
+        user: keys.googleUserName,
         pass: keys.googleEmailPassword
       }
     })
