@@ -15,14 +15,14 @@ function authorize() {
     const jwtClient = new authFactory.JWT(
       process.env.GOOGLE_USER_NAME, // defined in Heroku
       null,
-      process.env.GOOGLE_ENAIL_PASSWORD, // defined in Heroku
+      process.env.GOOGLE_EMAIL_PASSWORD, // defined in Heroku
       null,
       process.env.GOOGLE_API_KEY, // defined in Heroku
       ['https://www.googleapis.com/auth/maps']
     );
 
     jwtClient.authorize(() => resolve(jwtClient));
-  });
+  })();
 }
 
 app.use(bodyParser.json());
