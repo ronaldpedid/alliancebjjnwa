@@ -17,11 +17,13 @@ export class Instructor extends Component {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/gd0rLxjDgIQ" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
           </div>
           <div>
-            <blockquote><h1><em>' You can do better than that man!'</em></h1></blockquote>
-            <h2>3x Pan Am Medalist.</h2>
-            <h2>3x Pan Am Medalist.</h2>
-            <h2>3x Pan Am Medalist.</h2>
-            <h2>3x Pan Am Medalist.</h2>
+            <h1>Head Instructor: Luis Rubalcava</h1>
+            <blockquote><h1><em>' You can do better than tha3 man!'</em></h1></blockquote>
+            <h2>Accolades</h2>
+            <h3>3x Pan Am Medalist.</h3>
+            <h3>3x Pan Am Medalist.</h3>
+            <h3>3x Pan Am Medalist.</h3>
+            <h3>3x Pan Am Medalist.</h3>
           </div>
         </div>
         <div>

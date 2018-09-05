@@ -1,7 +1,6 @@
 @import '../../../src/flexbox.scss';
 @import '../../../src/client.scss';
 
-
 .contentRowVideo{
   @extend .contentRow;
   @include justify-content(center);
