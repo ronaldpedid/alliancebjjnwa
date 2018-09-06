@@ -1,36 +1,13 @@
 import React, { Component } from 'react';
-import keys from '../../../../keys/keys';
-import { compose, withProps } from 'recompose';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 
-export const MapComponent = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + keys.googleApiKey + "&v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ width: `600px`, height: `250px` }} />,
-    mapElement: <div style={{ height: `100%` }} />
 
-  }),
-  withScriptjs,
-  withGoogleMap
-)((props) =>
-  <GoogleMap
-    defaultZoom={14}
-    defaultCenter={{ lat: 36.1755893, lng: -94.1496956 }}
-  >
-    {props.isMarkerShown && <Marker position={{ lat: 36.1755893, lng: -94.1496956 }} />}
-  </GoogleMap>
-)
-
-class FancyComponent extends React.PureComponent {
-
+export const MapComponent = {
   render() {
     return (
-      <MapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick}
-      />
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52397.39860256761!2d-92.41711412089843!3d34.83518019999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d2a1f0f29d2deb%3A0x2be60508077aa472!2sAlliance+Jiu+Jitsu+Arkansas!5e0!3m2!1sen!2sus!4v1536181970141" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
     )
   }
 }

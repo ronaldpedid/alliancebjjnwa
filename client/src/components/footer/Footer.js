@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './footer.scss';
-import { MapComponent } from '../map/Map';
+
 
 export class Footer extends React.Component {
   render() {
@@ -8,7 +8,7 @@ export class Footer extends React.Component {
       <div>
         <div className={style.footerContainer}>
           <div className={style.mapPanel}>
-            <MapComponent />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21665.593251795137!2d-94.15570157344338!3d36.176051075746486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x842a312086ee6b4f!2sAlliance+Jiu-Jitsu+of+NWA!5e0!3m2!1sen!2sus!4v1536200605951" width="305" height="255" frameBorder="0" className={style.iFrameBorder} allowFullScreen></iframe>
           </div>
           <div className={style.addressPanel}>
             <h3>Alliance Bjj of NWA</h3>
@@ -25,7 +25,7 @@ export class Footer extends React.Component {
         <div className={style.copyrightPanel}>
           <h4 className={style.copyrightCopy}>Alliance Jiu-Jitsu Association. 2016 All rights reserved.</h4>
         </div>
-      </div>
+      </div >
     )
   }
 }
