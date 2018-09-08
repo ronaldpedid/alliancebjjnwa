@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.post('/api/form', (req, res) => {
+  console.log(req.body);
   nodemailer.createTestAccount((err, account) => {
     const htmlEmail = `
       <h3>Contact Details</h3>
@@ -28,14 +29,11 @@ app.post('/api/form', (req, res) => {
 
     let transporter = nodemailer.createTransport({
       service: 'gmail',
-      host: 'smtp.gmail.com',
+      host: 'mail.google.com',
       port: 465,
       auth: {
         user: keys.googleUserName,
         pass: keys.googleEmailPassword
-      },
-      tls: {
-        rejectUnauthorized: false
       }
     })
 
@@ -57,6 +55,9 @@ app.post('/api/form', (req, res) => {
 
   })
 });
+
+
+
 
 let PORT = 8000;
 let PORT_ENV = process.env.PORT;

@@ -15,7 +15,7 @@ module.exports = (app) => {
 
       let transporter = nodemailer.createTransport({
         service: 'gmail',
-        host: 'smtp.gmail.com',
+        host: 'mail.google.com',
         port: 465,
         auth: {
           user: keys.googleUserName,
