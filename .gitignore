@@ -1,6 +1,7 @@
 node_modules
 dev.js
 # production
+base.js
 /build
 dev.js
 

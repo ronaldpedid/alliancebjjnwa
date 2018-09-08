@@ -33,6 +33,9 @@ app.post('/api/form', (req, res) => {
       auth: {
         user: keys.googleUserName,
         pass: keys.googleEmailPassword
+      },
+      tls: {
+        rejectUnauthorized: false
       }
     })
 
