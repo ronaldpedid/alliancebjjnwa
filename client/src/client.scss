@@ -1,3 +1,19 @@
+//import flexbox styles
+@import './src/flexbox.scss';
+
+/* STYLE GUIDE VARS */
+
+$site--color__gray: #393D42;
+$site--color__lightGray: #f2f3f4;
+$site--color__black: #1C1C1B;
+$site--color__yellow: #FACC05;
+$site--color__green: #019c7D;
+$site--color__white: #ffffff;
+$site--color__disabled: #444444;;
+$copy--font__lato: 'Lato', sans-serif;
+$copy--font__oswald: 'Oswald', sans-serif;
+
+
 *,
 *::before,
 *::after{
@@ -12,7 +28,7 @@ html{
 body{
   font-size: 62.5%;
   overflow-x: hidden;
-  font-family: 'Oswald', sans-serif;
+  font-family: $copy--font__oswald;
 }
 
 a{
@@ -23,17 +39,19 @@ a{
 button{
   @include display(block);
   cursor: pointer;
-  background-color: transparent;
-  color: red;
+  background-color: $site--color__green;
+  color: $site--color__white;
   font-weight: 700;
-  font-size: 1.9rem;
-
-  border-color: white; 
+  font-family: $copy--font__oswald;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
   &:hover{
-    background-color: transparent;
+    opacity: .8;
   }
   &:active{
-    background-color: transparent;
+    background-color: $site--color__green;
   }
   &:link{
     background-color: transparent;
@@ -43,3 +61,14 @@ button{
   }
 }
 
+.btn {
+  @extend button;
+}
+
+.yellow{
+  color:$site--color__yellow;
+}
+
+.green{
+  color:$site--color__green;
+}

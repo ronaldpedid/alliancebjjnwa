@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './panel.scss';
-import shapes from '../../../src/shapes.scss';
+
 
 export class AdultPanel extends React.Component {
   constructor(props) {
@@ -28,25 +28,31 @@ export class AdultPanel extends React.Component {
     return (
       <div
         onMouseEnter={this.handleMouseHover}
-        onMouseLeave={this.handleMouseHover}
-        className={style.panelContainer}>
-        {this.state.showOriginal &&
+        onMouseLeave={this.handleMouseHover}>
+        <div className={style.panelContainerAdult}>
+          {this.state.showOriginal &&
 
-          <div className={style.panel}>  <div className={shapes.triangleUP}></div>
-            <h4>ADULT COURSES</h4>
-            <h6><a>LEARN MORE</a></h6></div>}
+            <div className={style.panel}>
+              <h4 className={style}>ADULT COURSES</h4>
+              <h6 className={style.green}>LEARN MORE</h6></div>}
 
-        {this.state.isHovering &&
+          {this.state.isHovering &&
+            <div className={style.panelContainerAdultHover}>
+              <div className={style.panel}>
+                <div className={style.infoPanel}>
+                  <h6 className={style.infoHeader}>ADULT COURSES</h6>
+                  <div className={style.infoBody}>
+                    <p>6:15am-7:15am-Tues & Thurs</p>
+                    <p>6pm-8pm Mon-Wed Gi</p>
+                    <p>6pm-8pm Thurs Nogi</p>
+                  </div>
+                  <p className={style.lato}>Learn to defend themselves, develop confidence and improve fitness. $1XX a month per student.</p>
+                  <a href="/contact" >
+                    <h6 className={style.btn}>Sign Up</h6>
+                  </a>
+                </div></div> </div>}
+        </div>
 
-          <div className={style.panel}>
-            <div className={style.infoPanel}>
-              <h6>ADULT COURSES</h6>
-              <p>6:15am-7:15am-Tues & Thurs</p>
-              <p>6pm-8pm Mon-Wed Gi</p>
-              <p>6pm-8pm Thurs Nogi</p>
-              <p>Learn to defend themselves, develop confidence and improve fitness. $1XX a month per student.</p>
-              <h6 className={style.signup}><a href="/contact">Sign Up</a></h6>
-            </div></div>}
       </div>
     )
   }

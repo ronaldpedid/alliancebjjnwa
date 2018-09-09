@@ -8,10 +8,9 @@
   @include align-items(center);
   width: 100vw;
   font-size: 1.4rem;
-  background-color: #222;
-  color: #fff;
-
-
+  background-color: $site--color__lightGray;
+  color: $site--color__black;
+  padding: 2rem 0;
 }
 
 .iFrameBorder{
@@ -21,12 +20,18 @@
 .mapPanel{
   margin-left: 5%;
 }
+
+.addressPanel, .contactPanel{
+  text-align: center;
+}
+
 .addressPanel{
+  @include align-items(start);
   margin-right: 1%;
+  
 }
 .contactPanel{
   width: 20%;
-  color: #fff;
   margin-right: 5%;
 }
 
@@ -34,8 +39,19 @@
   font-size: 1rem;
   font-weight: 300;
   padding: .5rem 0;
-  background-color: #333333;
+  background-color: $site--color__black;
   .copyrightCopy{
-    margin-left: 5.2%;
+    text-align: center;
+    color: $site--color__white
+    
   }
+}
+
+h5.btn{
+  margin-top: .6rem;
+  text-align: center;
+}
+
+.contactPanel h4, .addressPanel h4{
+  margin: .3rem 0;
 }

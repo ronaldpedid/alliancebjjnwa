@@ -3,17 +3,24 @@
 
 .promoContainer{
   @include display(flex);
+  @include justify-content(center);
+  @include align-self(center);
   width: 100vw;
   height: 15rem;
-  background-image: url('/public/images/backgrounds/preroll.jpg');
+  padding: 3rem 0;
+  background-image: url('../../public/images/backgrounds/freeTrial.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 
 .promoCopy{
   @include align-self(center);
-  color: #fff;
+  color:$site--color__black;
+  text-transform: uppercase;
   font-size: 2.2rem;
-  width: 50%;
   text-align: center;
+}
+
+.promoBtn{
+  margin: 1.5rem auto 0 auto;
 }

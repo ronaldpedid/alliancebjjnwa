@@ -42,13 +42,12 @@ export class Contact extends Component {
       <div className={style.backgroundLanding}>
         <Header />
         <Navigation />
-        <ContactHero />
         <div className={style.contentColumn}>
           <div className={style.formContainer}>
-            <h1 className={style.largeHeadline}>We ask that anyone looking to sign up for classes comes into the gym and take a free introduction class to see if Brazillian Jiu Jitsu is right for you.</h1>
+
             <h2 className={style.smallHeadline}>Questions? Contact Us.</h2>
             <form onSubmit={this.handleSubmit} className={style.contactForm} >
-              <div className={style.formRow}>
+              <div className={style.formColumn}>
                 <div className={style.contentColumn}>
                   <label className={style.label}>Name</label>
                   <input
@@ -77,17 +76,17 @@ export class Contact extends Component {
               </div>
               <div className={style.contentColumn}>
                 <label className={style.label}>Message</label>
-                <input
+                <textarea
                   type="text"
                   name="message"
                   className={style.inputMessage}
-                  onChange={this.handleChange} />
+                  onChange={this.handleChange}></textarea>
               </div>
-
-              <button className={style.contactBtn}>Send</button>
+              <button className={style.btn}>Send</button>
             </form>
           </div>
         </div>
+
         <div>
           <Footer />
         </div>

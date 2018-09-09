@@ -7,8 +7,8 @@
   @include align-items(center);
   width: 100vw;
   height: 150px;
-  background-color: darkgray;
-  color: #fff;
+  background-color:$site--color__gray;
+  color: $site--color__white;
   font-weight: 300;
 
   .bold{
@@ -22,7 +22,7 @@
     .logo{
       margin-left: 1.5rem;
       font-size: 3rem;
-      width: 18.75rem;
+      width: 25.75rem;
     }
   }
   .address{
@@ -33,7 +33,7 @@
     font-size: 1.4rem;
     font-weight: 300;
    }
-   
-   
   }
+
+
 }

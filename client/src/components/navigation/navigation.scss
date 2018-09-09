@@ -7,12 +7,15 @@
   background-color: transparent;
   width: 100vw;
   font-size: 1.1rem;
-  background-color: #4e4e4e;
+  background-color: $site--color__black;
   padding: .5rem 0;
   text-transform: uppercase;
   a{
-    color: orange;
+    color: $site--color__white;
     text-decoration: none;
+    &:hover, &:active{
+      color: $site--color__green;
+    }
   }
   ul{
     @include display(flex);

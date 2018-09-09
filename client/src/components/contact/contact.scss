@@ -1,58 +1,71 @@
 @import '../../../src/flexbox.scss';
 @import '../../../src/client.scss';
 
-
+.formContainer{
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  
+}
  .label{
+  margin-top: 1.6rem;
    font-size: 1rem;
  }
 
+
+
 .input{
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $site--color__green;
   width: 22rem;
   font-size: .9rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: $copy--font__lato;
   padding-left: .1rem;
   :placeholder-shown{
     padding: 2px;
   }
+  :valid{
+   background: none; 
+  }
 }
 .inputMessage{
   @extend .input;
-  width: 98%;
+  width: 100%;
+  height: 9rem;
+  border: 1px solid $site--color__green;
 }
 .formRow{
   @extend .contentRow;
   width: 100%;
-
-}
-
-#email{
-  margin:0 1rem;
 }
 
 .formContainer{
-  margin-left: 5%;
   padding: 2rem 0;
 }
 
 .contactBtn{
   @include align-self(center);
-  font-family: 'Oswald', sans-serif;
-  border: none;
   font-size: 1rem;
   margin-top: 1rem;
-  color: #000;
 }
 
 .largeHeadline{
   font-size: 1.6rem;
   font-weight: 300;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .smallHeadline{
   @extend .largeHeadline;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  
+}
+
+button.btn{
+  @include justify-content(center);  
+  margin: 1rem auto 0 auto;
+  padding: 1.4rem 3.5rem;
   
 }

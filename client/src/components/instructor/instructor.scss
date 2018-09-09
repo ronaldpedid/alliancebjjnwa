@@ -12,3 +12,36 @@
 .promoVideo{
   margin-right: 1.4rem;
 }
+
+
+.contentRowInstructor{
+  @extend .contentRow;
+ 
+  
+}
+.luis{
+  background-image: url('/public/images/backgrounds/luis.png');
+  background-size: cover;
+  width: 50%;
+  height: 35rem;
+}
+
+.luisInfo{
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accolades{
+  @extend .green;
+  text-transform: uppercase;
+  margin-top: .7rem;
+}
+
+.bio{
+  margin: 1rem 3rem;
+}

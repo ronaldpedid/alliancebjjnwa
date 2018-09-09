@@ -1,7 +1,6 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const path = require('path');
 const keys = require('./keys/keys');
 
@@ -17,33 +16,28 @@ app.post('/api/form', (req, res) => {
   sgMail.setApiKey(keys.sgApiKey);
 
   const msg = {
-    to: 'elementfayt@gmail.com',
+    to: keys.sgSender,
     from: req.body.email,
-    subject: 'Sending with SendGrid is Fun',
+    subject: 'Information for Jiu Jitsu',
     text: req.body.message,
     html: `<h3>Contact Details</h3>
-    <ul>
-      <li>${req.body.name}</li>
-      <li>${req.body.email}</li>
-      <li>${req.body.phone}</li>
-    </ul>
-    <h3>Message</h3>
-    <p>${req.body.message}</p>`
+        <ul>
+          <li>${req.body.name}</li>
+          <li>${req.body.email}</li>
+          <li>${req.body.phone}</li>
+        </ul>
+        <h3>Message</h3>
+        <p>${req.body.message}</p>`
   };
-
   console.log(msg);
   sgMail.send(msg);
-});
-
-
-
-
+  res.redirect('/');
+})
 
 
 
 let PORT = 8000;
 let PORT_ENV = process.env.PORT;
-
 
 
 /* production only */
@@ -56,9 +50,6 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
   });
 }
-
-
-
 
 app.listen(PORT_ENV || PORT, function () {
   console.log('port is currently running on ' + PORT);
