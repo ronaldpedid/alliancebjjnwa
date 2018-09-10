@@ -1,10 +1,18 @@
 @import '../../../src/flexbox.scss';
 @import '../../../src/client.scss';
 
+
+.socialLanding{
+  @extend .backgroundLanding;
+  @include justify-content(center);
+  @include align-items(center);
+  height: 35rem;
+}
 .contentRowVideo{
   @extend .contentRow;
-  @include justify-content(center);
+
   padding: 2rem 0;
+ 
   
 }
 

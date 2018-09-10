@@ -1,6 +1,32 @@
 import React, { Component } from 'react';
 import style from './panel.scss'
 
+
+
+export class GreenKidPanel extends Component {
+  render() {
+    return (
+      <div className={style.panelContainerKidHover}>
+        <div className={style.panel}>
+          <div className={style.infoPanel}>
+            <h6 className={style.infoHeader}>KID & TEEN COURSES</h6>
+            <div className={style.infoBody}>
+              <p>5pm-6pm-Mon-Wed Gi</p>
+              <p>5pm-6pm Thurs Nogi</p>
+              <br></br>
+            </div>
+            <p className={style.lato}>Learn to defend themselves, develop confidence and improve fitness. $1XX a month per student.</p>
+            <a href="/contact" >
+              <h6 className={style.btn}>Sign Up</h6>
+            </a>
+          </div></div>
+      </div>
+    )
+  }
+}
+
+
+
 export class KidPanel extends React.Component {
   constructor(props) {
     super(props);
@@ -35,19 +61,7 @@ export class KidPanel extends React.Component {
               <h6 className={style.green}>LEARN MORE</h6></div>}
 
           {this.state.isHovering &&
-            <div className={style.panelContainerKidHover}>
-              <div className={style.panel}>
-                <div className={style.infoPanel}>
-                  <h6 className={style.infoHeader}>KID & TEEN COURSES</h6>
-                  <div className={style.infoBody}>
-                    <p>5pm-6pm-Mon-Wed Gi</p>
-                    <p>5pm-6pm Thurs Nogi</p>
-                  </div>
-                  <p className={style.lato}>Learn to defend themselves, develop confidence and improve fitness. $1XX a month per student.</p>
-                  <a href="/contact" >
-                    <h6 className={style.btn}>Sign Up</h6>
-                  </a>
-                </div></div> </div>}
+            <GreenKidPanel />}
         </div>
 
       </div>

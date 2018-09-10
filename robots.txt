@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+Disallow: /contact
+Disallow: /classes

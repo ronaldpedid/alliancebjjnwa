@@ -3,21 +3,8 @@
 
 .heroContainer{
   width: 100vw;
-  height: 40rem;
+  height: 42rem;
   background-image: url('/public/images/backgrounds/landingFPO.png');
   background-size: cover;
-  background-position: center;
-}
-
-.instructorContainer{
-  @extend .heroContainer;
-  background-image: url('/public/images/backgrounds/luisrubalcava.jpg');
-  background-position: top;
-
-}
-
-.contactContainer{
-  @extend .heroContainer;
-  background-image: url('/public/images/backgrounds/action.jpg');
   background-position: center;
 }

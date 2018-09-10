@@ -5,7 +5,7 @@ import style from './social.scss';
 export class Social extends Component {
   render() {
     return (
-      <div className={style.backgroundLanding}>
+      <div className={style.socialLanding}>
         <h1 className={style.socialHeader}>HOW WE ROLL</h1>
         <div className={style.contentRowVideo}>
           <div className={style.promoVideo}>

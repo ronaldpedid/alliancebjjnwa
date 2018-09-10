@@ -6,9 +6,9 @@
   @include justify-content(center);
   @include align-self(center);
   width: 100vw;
-  height: 15rem;
+  height: 25rem;
   padding: 3rem 0;
-  background-image: url('../../public/images/backgrounds/freeTrial.jpg');
+  background-image: url('/public/images/backgrounds/freeTrial.jpg');
   background-size: cover;
   background-position: center;
 }
