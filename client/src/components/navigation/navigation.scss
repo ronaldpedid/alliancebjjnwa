@@ -4,12 +4,17 @@
 .navigationContainer{
   @include display(flex);
   @include flex-direction(row);
-  background-color: transparent;
-  width: 100vw;
-  font-size: 1.1rem;
+  width: 100%;
+  font-size: .7rem;
   background-color: $site--color__black;
   padding: .5rem 0;
   text-transform: uppercase;
+  @media(max-width: 1440px){
+    font-size: 1rem;
+  }
+  @media(max-width: 767px){
+    font-size: smaller;
+  }
   a{
     color: $site--color__white;
     text-decoration: none;

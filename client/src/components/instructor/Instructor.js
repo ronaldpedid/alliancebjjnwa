@@ -35,11 +35,16 @@ export class Instructor extends Component {
       <div className={style.backgroundLanding}>
         <Header />
         <Navigation />
-        <InstructorLuis />
+        <div className={style.instructors}>
+          <InstructorLuis />
+        </div>
+
+
         <div className={style.contentRow}>
           <GreenKidPanel />
           <GreenAdultPanel />
         </div>
+
         <div>
           <Footer />
         </div>

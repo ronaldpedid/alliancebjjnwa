@@ -5,35 +5,93 @@
   @include display(flex);
   @include justify-content(space-between);
   @include align-items(center);
-  width: 100vw;
-  height: 150px;
+  width: 100%;
+  height: auto;
   background-color:$site--color__gray;
   color: $site--color__white;
   font-weight: 300;
+  @media(max-width: 767px){
+    text-align: center;
+  }
 
-  .bold{
+.bold{
     font-weight: 600;
   }
-  .logoContainer{
+
+.logoContainer{
     @include display(flex);
     @include flex-direction(row);
     @include align-items(center);
     margin-left: 5%;
-    .logo{
-      margin-left: 1.5rem;
-      font-size: 3rem;
-      width: 25.75rem;
+    @media(max-width: 768px){
+      @include flex-direction(row);
+      margin-left: 0;
     }
+    
+  
+    .logoCopyContainer{
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-left: 1.5rem;
+      @media(max-width: 768px){
+      font-size: 1rem; 
+      }
+      @media(max-width: 767px){
+     font-size: 1rem;
+        }
+    }
+    .logo{
+      font-size: 1.5rem;
+      width: auto;
+      @media(max-width: 425px){
+       width: auto;
+       font-size: 1rem;
+      }
+      
+    }
+    @media(max-width: 768px){
+      @include flex-direction(row);
+      padding-left: 1rem;
+      
+    }
+
   }
+
   .address{
     margin-right: 5%;
-    font-size: 1.1rem;
-   h4{
-    text-align: right;
-    font-size: 1.4rem;
-    font-weight: 300;
-   }
+   & h4{
+      font-size: .6rem;
+      text-align: right;
+      @media(max-width: 1440px){
+        font-size: 1.8rem;
+        text-align: right;
+        }
+      @media(max-width: 1024px){
+        font-size: 2rem;
+        text-align: right;
+        }
+      @media(max-width: 768px){
+          font-size: .7rem;
+          margin-bottom: .5rem;
+          }
+     }
+
+    & h3{
+      font-size: .1rem;
+      text-align: right;
+      @media(max-width: 1440px){
+        font-size: 1.9rem;
+       
+        }
+      @media(max-width: 1024px){
+        font-size: 1.2rem;
+        }
+      @media(max-width: 768px){
+          font-size: .8rem;
+          text-align: right;
+          }
+   
+    }
   }
-
-
 }

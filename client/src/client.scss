@@ -9,7 +9,8 @@ $site--color__black: #1C1C1B;
 $site--color__yellow: #FACC05;
 $site--color__green: #019c7D;
 $site--color__white: #ffffff;
-$site--color__disabled: #444444;;
+$site--color__red: #FF0000;
+$site--color__disabled: #444444;
 $copy--font__lato: 'Lato', sans-serif;
 $copy--font__oswald: 'Oswald', sans-serif;
 
@@ -22,13 +23,20 @@ $copy--font__oswald: 'Oswald', sans-serif;
 }
 
 html{
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
   box-sizing: border-box;
+
 }
 
 body{
-  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  
   overflow-x: hidden;
   font-family: $copy--font__oswald;
+  
 }
 
 a{
@@ -72,3 +80,8 @@ button{
 .green{
   color:$site--color__green;
 }
+
+.hide{
+  display: none;
+}
+

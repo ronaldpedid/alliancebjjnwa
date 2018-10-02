@@ -6,6 +6,7 @@
   @extend .contentRow;
   @include justify-content(center);
   padding: .6rem 0;
+
   
 }
 
@@ -16,14 +17,13 @@
 
 .contentRowInstructor{
   @extend .contentRow;
- 
-  
+  height: 40rem;
 }
 .luis{
-  background-image: url('/public/images/backgrounds/luis.png');
+  background-image: url('/dist/public/images/backgrounds/luis.png');
   background-size: cover;
   width: 50%;
-  height: 35rem;
+  
 }
 
 .luisInfo{
@@ -32,7 +32,7 @@
   @include justify-content(center);
   @include align-items(center);
   width: 50%;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 300;
 }
 

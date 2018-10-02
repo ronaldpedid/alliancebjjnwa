@@ -2,9 +2,14 @@
 @import '../../../src/client.scss';
 
 .heroContainer{
-  width: 100vw;
-  height: 42rem;
-  background-image: url('/public/images/backgrounds/landingFPO.png');
-  background-size: cover;
+  width: 100%;
+  height: 30rem;
+  background-image: url('/dist/public/images/backgrounds/landingFPO.png');
+  background-size: 100%;
   background-position: center;
+  
+  @media(max-width: 1024px){
+    width: 100%;
+    height:14rem;
+  }
 }

@@ -22,15 +22,9 @@ export class Landing extends Component {
           <KidPanel />
           <AdultPanel />
         </div>
-        <div>
-          <Promo />
-        </div>
-        <div>
-          <Social />
-        </div>
-        <div>
-          <Footer />
-        </div>
+        <Promo />
+        <Social />
+        <Footer />
       </div>
     );
   }

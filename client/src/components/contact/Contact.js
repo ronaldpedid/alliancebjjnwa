@@ -3,41 +3,60 @@ import style from './contact.scss';
 import { Header } from '../header/Header';
 import { Navigation } from '../navigation/Navigation';
 import { Footer } from '../footer/Footer';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export class ContactForm extends Component {
+class ContactForm extends Component {
   render() {
+    const {
+      name,
+      email,
+      phone,
+      message,
+      handleChange,
+      nameErr,
+      emailErr,
+      phoneErr,
+      messageErr,
+      handleSubmit
+    } = this.props;
     return (
       <div className={style.contentColumn}>
         <div className={style.formContainer}>
-
           <h2 className={style.smallHeadline}>Questions? Contact Us.</h2>
-          <form onSubmit={this.handleSubmit} className={style.contactForm} >
+          <h3 id="hiddenRequired" className={style.hide}>Please fill out the required fields.</h3>
+          <form onSubmit={handleSubmit} className={style.contactForm} >
             <div className={style.formColumn}>
               <div className={style.contentColumn}>
                 <label className={style.label}>Name</label>
                 <input
                   type="text"
                   name="name"
-                  className={style.input}
-                  onChange={this.handleChange} />
+                  className={nameErr ? style.error : style.input}
+                  onChange={handleChange}
+                  value={name}
+                />
               </div>
               <div id={style.email} className={style.contentColumn}>
                 <label className={style.label}>Email</label>
                 <input
                   type="email"
                   name="email"
-                  className={style.input}
-                  onChange={this.handleChange} />
+                  className={emailErr ? style.error : style.input}
+                  onChange={handleChange}
+                  value={email}
+                />
               </div>
               <div className={style.contentColumn}>
                 <label className={style.label}>Phone Number</label>
                 <input
                   type="number"
                   name="phone"
-                  className={style.input}
+                  className={phoneErr ? style.error : style.input}
                   placeholder="(555)555-5352"
-                  onChange={this.handleChange} />
+                  onChange={handleChange}
+                  value={phone}
+                />
               </div>
             </div>
             <div className={style.contentColumn}>
@@ -45,16 +64,30 @@ export class ContactForm extends Component {
               <textarea
                 type="text"
                 name="message"
-                className={style.inputMessage}
-                onChange={this.handleChange}></textarea>
+                className={messageErr ? style.errorMessage : style.inputMessage}
+                onChange={handleChange}
+                value={message}></textarea>
             </div>
-            <button className={style.btn}>Send</button>
+            <button className={style.btn} type="submit">Send</button>
           </form>
         </div>
       </div>
     )
   }
 }
+
+ContactForm.propTypes = {
+  name: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  message: PropTypes.string,
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  nameErr: PropTypes.bool,
+  emailErr: PropTypes.bool,
+  phoneErr: PropTypes.bool,
+  messageErr: PropTypes.bool
+};
 
 export class Contact extends Component {
   constructor(props) {
@@ -63,7 +96,11 @@ export class Contact extends Component {
       name: '',
       email: '',
       phone: '',
-      message: ''
+      message: '',
+      nameErr: false,
+      emailErr: false,
+      phoneErr: false,
+      messageErr: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -74,8 +111,18 @@ export class Contact extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  async handleSubmit(e) {
-    e.preventDefault();
+  validateForm() {
+    const { name, email, phone, message } = this.state;
+    const nameErr = name.length === 0;
+    const emailErr = email.length === 0;
+    const phoneErr = phone.length === 0 || phone.length < 7;
+    const messageErr = message.length === 0;
+
+    this.setState({ nameErr, emailErr, phoneErr, messageErr })
+    return !(nameErr || emailErr || phoneErr || messageErr);
+  }
+
+  async submitForm() {
     const { name, email, phone, message } = this.state;
     const form = await axios.post('/api/form', {
       name,
@@ -87,12 +134,49 @@ export class Contact extends Component {
       console.log(response.data.errors)
     })
   }
+
+  showHiddenMessage(hiddenMessage) {
+    const requiredReply = document.querySelector("#hiddenRequired");
+    requiredReply.classList.remove(style.hide);
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    if (this.validateForm()) {
+      await this.submitForm();
+
+    } else {
+      this.showHiddenMessage();
+    }
+
+  }
   render() {
+    const {
+      name,
+      email,
+      phone,
+      message,
+      nameErr,
+      emailErr,
+      phoneErr,
+      messageErr,
+    } = this.state;
     return (
       <div className={style.backgroundLanding}>
         <Header />
         <Navigation />
-        <ContactForm />
+        <ContactForm
+          name={name}
+          email={email}
+          phone={phone}
+          message={message}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          nameErr={nameErr}
+          emailErr={emailErr}
+          phoneErr={phoneErr}
+          messageErr={messageErr}
+        />
         <div>
           <Footer />
         </div>

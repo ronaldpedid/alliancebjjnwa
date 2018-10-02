@@ -68,3 +68,22 @@ button.btn{
   padding: 1.4rem 3.5rem;
   
 }
+
+.error{
+  @extend .input;
+  border-bottom-color:red;
+}
+
+.errorMessage{
+  @extend .inputMessage;
+  height: 9rem;
+  border-color: red;
+}
+
+.hide{
+  @extend .hide;
+}
+
+.show{
+  display: block;
+}

@@ -1,4 +1,10 @@
 .regular{
-  height: 7.5rem;
+  height: 6.5rem;
   width: 8.75rem;
+  @media(max-width: 768px){
+    height: 4rem;
+    width: 4rem;
+    
+    
+  }
 }

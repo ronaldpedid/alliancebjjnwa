@@ -7,6 +7,12 @@
   @include justify-content(center);
   width: 50vw;
   height:25rem;  
+  @media(min-width: 768px){
+    @include flex-direction(row);
+  }
+  @media(max-width: 767px){
+    @include flex-direction(column);
+  }
 }
 
 .panel{
@@ -19,15 +25,24 @@
   font-size: 2rem;
 }
 
+.panelContainerAdult,
+.panelContainerAdultHover,
+.panelContainerKid,
+.panelContainerKidHover{
+  @media(max-width: 768px){
+    width: 100vw;
+  }
+}
+
 .panelContainerAdult{
 @extend .panelContainer;
-background-image: url('/public/images/backgrounds/adultNohover.jpg');
+background-image: url('/dist/public/images/backgrounds/adultNohover.jpg');
 background-size: cover;
 }
 
 .panelContainerAdultHover{
   @extend .panelContainer;
-  background-image: url('/public/images/backgrounds/adultHover.jpg');
+  background-image: url('/dist/public/images/backgrounds/adultHover.jpg');
   background-size: cover;
   color: $site--color__white;
   border:none;
@@ -40,14 +55,14 @@ background-size: cover;
 .panelContainerKid{
   @extend .panelContainer;
   @extend .panelContainerAdult;
-  background-image: url('/public/images/backgrounds/kidNohover.jpg');
+  background-image: url('/dist/public/images/backgrounds/kidNohover.jpg');
  
 }
 
 .panelContainerKidHover{
   @extend .panelContainer;
   @extend .panelContainerAdultHover;
-  background-image: url('/public/images/backgrounds/kidHover.jpg');
+  background-image: url('/dist/public/images/backgrounds/kidHover.jpg');
 }
 
 .infoPanel{
@@ -55,9 +70,9 @@ background-size: cover;
   font-size: 1.3rem;
   
 
-  p{
+  &p{
     text-transform: none;
-    margin: .1rem .2rem;
+    margin: .1rem .4rem;
     
   }
   .signup{
@@ -79,6 +94,5 @@ background-size: cover;
 
 h6.btn{
   margin-top: 1rem;
-  font-size: 1.6rem;
   font-weight: 300;
 }
