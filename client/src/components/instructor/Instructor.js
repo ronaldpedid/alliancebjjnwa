@@ -15,8 +15,8 @@ class InstructorLuis extends Component {
         <div className={style.luis}>
         </div>
         <div className={style.info}>
-          <h1 className={style.green}>Luis Rubalcava</h1>
-          <h2>Head Instructor</h2>
+          <h1 className={style.headerName}>Luis Rubalcava</h1>
+          <h2 className={style.headerTitle}>Head Instructor</h2>
 
           <p className={style.bio}>
             Professor Luis Rubalcava is a Brazilian Jiu-Jitsu baclk belt instructor. Certified and recognized by the
@@ -40,8 +40,8 @@ class InstructorAdam extends Component {
         <div className={style.adam}>
         </div>
         <div className={style.info}>
-          <h2 className={style.green}>Adam Osborn</h2>
-          <h1>Instructor</h1>
+          <h2 className={style.headerName}>Adam Osborn</h2>
+          <h1 className={style.headerTitle}>Instructor</h1>
 
           <p className={style.bio}>
             Started jiu-jitsu in 2008 and currently promoted to brown belt via Luis Rubacalva. Amateur mma record of 4 wins 2 losses and lifetime fan of combat sports. Currently working as a licensed physical therapist assistant and working to his black belt in jujitsu adam enjoys coaching all aspects of martial arts and personal training.
@@ -60,8 +60,8 @@ class InstructorTim extends Component {
         <div className={style.tim}>
         </div>
         <div className={style.info}>
-          <h2>Tim Ikehara</h2>
-          <h1>Instructor</h1>
+          <h2 className={style.headerName}>Tim Ikehara</h2>
+          <h1 className={style.headerTitle}>Instructor</h1>
           <p className={style.bio}>
             Bio Coming Soon.
           </p>
@@ -79,8 +79,8 @@ class InstructorMike extends Component {
         <div className={style.mike}>
         </div>
         <div className={style.info}>
-          <h2>Mike Berrios</h2>
-          <h1>Instructor</h1>
+          <h2 className={style.headerName}>Mike Berrios</h2>
+          <h1 className={style.headerTitle}>Instructor</h1>
           <p className={style.bio}>
             Mike was promoted to purple belt in Brazilian Jiu Jitsu by Luis Rubalcava, and was promoted to black belt under the lineage Toshiro Obata.
             With 18 years of experience and active training he has gained extensive knowledge in formal martial arts which include: Kickboxing, Mauy Thai, Shinkendo, and Aikida. Mike is also well versed in self defense techniques weaponary and knife defenses. He has tested his knowledge in multipul competitions including BJJ tournaments, full contact G.F.T. tournaments, and has an amateur MMA record of 4 wins and 0 losses all wins coming in the first round. Mike is currently a manager at Lazyboy galleries in Springdale, AR.
@@ -99,8 +99,8 @@ class InstructorSteven extends Component {
         <div className={style.steven}>
         </div>
         <div className={style.info}>
-          <h2 className={style.green}>Steven Carlisle</h2>
-          <h1>Instructor</h1>
+          <h2 className={style.headerName}>Steven Carlisle</h2>
+          <h1 className={style.headerTitle}>Instructor</h1>
           <p className={style.bio}>
             Bio Coming Soon.
           </p>
