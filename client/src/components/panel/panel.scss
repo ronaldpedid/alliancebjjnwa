@@ -53,6 +53,10 @@ background-size: cover;
 
 .lato{
   font-family: $copy--font__lato;
+  @media(max-width: 600px){
+    font-size: 1.4px;
+    padding: 4.5rem;
+  }
 }
 
 .panelContainerKid{
