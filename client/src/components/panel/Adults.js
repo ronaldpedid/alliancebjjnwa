@@ -15,7 +15,7 @@ export class GreenAdultPanel extends Component {
               <p>6pm-8pm Mon-Wed Gi</p>
               <p>6pm-8pm Thurs Nogi</p>
             </div>
-            <p className={style.lato}>Learn to defend themselves, develop confidence and improve fitness. $1XX a month per student.</p>
+            <p className={style.lato}>Learn to defend yourself, develop confidence and improve fitness.</p>
             <a href="/contact" >
               <h6 className={style.btn}>Sign Up</h6>
             </a>
