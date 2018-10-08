@@ -4,7 +4,7 @@ module.exports = (app) => {
     sgMail.setApiKey(keys.sgApiKey);
 
     const msg = {
-      to: 'elementfayt@gmail.com',
+      to: 'alliancebjjofnwa@gmail.com',
       from: req.body.email,
       subject: 'Information for Jiu Jitsu',
       text: req.body.message,
