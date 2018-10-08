@@ -122,6 +122,9 @@ h5.btn{
     font-size: 1.6rem;
     width: 15%;
   }
+  @media(max-width: 600px){
+    font-size: 1.1rem;
+  }
   @media(max-width: 320px){
     font-size: 1.3rem;
   }
