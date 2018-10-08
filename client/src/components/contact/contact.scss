@@ -6,11 +6,16 @@
   @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
+  font-size: 2rem;
+  
   
 }
  .label{
   margin-top: 1.6rem;
-   font-size: 1rem;
+   font-size: 2rem;
+   @media(min-width: 1920px){
+    font-size: 2rem;
+  }
  }
 
 
@@ -18,21 +23,39 @@
   border: none;
   border-bottom: 1px solid $site--color__green;
   width: 22rem;
-  font-size: .9rem;
+  font-size: 1.3rem;
   font-family: $copy--font__lato;
   padding-left: .1rem;
+
   :placeholder-shown{
     padding: 2px;
   }
   :valid{
    background: none; 
   }
+
+  @media(min-width: 1920px){
+    width: 50rem;
+  }
+  @media(max-width: 1919px){
+    width: 45rem;
+    font-size: 2rem;
+  }
+  @media(max-width: 600px){
+    width: 30rem;
+  }
 }
 .inputMessage{
   @extend .input;
   width: 100%;
-  height: 9rem;
+  height: 16rem;
   border: 1px solid $site--color__green;
+  @media(min-width: 1920px){
+    height: 50rem;
+  }
+  @media(max-width: 1919px){
+    height: 45rem;
+  }
 }
 .formRow{
   @extend .contentRow;
@@ -47,6 +70,9 @@
   @include align-self(center);
   font-size: 1rem;
   margin-top: 1rem;
+  @media(max-width: 600px){
+    font-size: 2rem;
+  }
 }
 
 .largeHeadline{
@@ -58,14 +84,21 @@
 
 .smallHeadline{
   @extend .largeHeadline;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
+  @media(max-width: 600px){
+    font-size: 2rem;
+  }
   
 }
 
 button.btn{
   @include justify-content(center);  
-  margin: 1rem auto 0 auto;
+  margin: 2.5rem auto 1rem auto;
   padding: 1.4rem 3.5rem;
+  font-size: 2rem;
+  @media(max-width: 600px){
+    font-size: 3rem;
+  }
   
 }
 
@@ -76,7 +109,7 @@ button.btn{
 
 .errorMessage{
   @extend .inputMessage;
-  height: 9rem;
+  height: 45rem;
   border-color: red;
 }
 
@@ -86,4 +119,8 @@ button.btn{
 
 .show{
   display: block;
+}
+
+.shrink{
+  font-size: smaller;
 }

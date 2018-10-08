@@ -23,7 +23,7 @@ class ContactForm extends Component {
     return (
       <div className={style.contentColumn}>
         <div className={style.formContainer}>
-          <h2 className={style.smallHeadline}>Questions? Contact Us.</h2>
+          <h2 className={style.smallHeadline}>Questions? Information? Contact Us.</h2>
           <h3 id="hiddenRequired" className={style.hide}>Please fill out the required fields.</h3>
           <form onSubmit={handleSubmit} className={style.contactForm} >
             <div className={style.formColumn}>
@@ -135,7 +135,7 @@ export class Contact extends Component {
     })
   }
 
-  showHiddenMessage(hiddenMessage) {
+  showHiddenMessage() {
     const requiredReply = document.querySelector("#hiddenRequired");
     requiredReply.classList.remove(style.hide);
   }
@@ -144,8 +144,9 @@ export class Contact extends Component {
     e.preventDefault();
     if (this.validateForm()) {
       await this.submitForm();
-
-    } else {
+      window.location = "/"
+    }
+    else {
       this.showHiddenMessage();
     }
 
@@ -159,7 +160,7 @@ export class Contact extends Component {
       nameErr,
       emailErr,
       phoneErr,
-      messageErr,
+      messageErr
     } = this.state;
     return (
       <div className={style.backgroundLanding}>

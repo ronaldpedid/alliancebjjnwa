@@ -12,8 +12,7 @@ export class Footer extends React.Component {
           </div>
           <div className={style.addressPanel}>
             <h3 className={style.green}>Alliance BJJ of NWA</h3>
-            <h4>1991 West Sunset Ave, Suite 2B, Springdale, Arkansas</h4>
-            <h5>555-434-3445</h5>
+            <h4>1772 West Sunset Ave, Suite 2B, Springdale, Arkansas 72762</h4>
           </div>
           <div className={style.contactPanel}>
             <h3 className={style.contactHeader}>Contact Us</h3>

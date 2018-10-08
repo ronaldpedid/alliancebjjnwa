@@ -9,27 +9,53 @@
   height: auto;
   width: 100%;
   margin: 0 auto;
+
+  @media(max-width: 425px){
+    margin-top: 1rem;
+    
+    
+  }
+  
 }
 .contentRowVideo{
   @extend .contentRow;
-  @include justify-content(center);
-  width: 100%;
-  height: auto;
-  @media(max-width: 1024px){
+  @include justify-content(space-around);
+  @include align-items(space-between);
+  width: 50%;
+  height: 100%;
+  padding: 2rem 0;
+  @media(max-width: 767px){
     @include flex-direction(column);
     @include justify-content(center);
     @include align-items(center);
-
-    
+    width: 100%;
+    height: 100%;
   }
-  padding: 2rem 0;
- 
-  
+
 }
 
+.video {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+
+}
 
 .promoVideo{
-  margin-right: 1.4rem;
+  @include display(flex);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+
+  @media(max-width: 767px){
+   margin-right: 0;
+   width: 100%;
+   height: 100%;
+   margin-bottom: 1rem;
+  }
+
   @media(max-width: 320px){
     margin: 0;
     width: 320px;
@@ -39,12 +65,25 @@
 .socialHeader{
   text-align: center;
   font-size: 2.4rem;
+  padding: 1rem;
+  @media(min-width: 1920px){
+    font-size: 3rem;
+   }
+  @media(max-width: 425px){
+    @include justify-content(center);
+    align-items: center;
+    font-size: 1.5rem;
+  }
 }
 
+iframe{
+  display: flex;
+}
 .fb-wrapper{
-  width: 100%;
-  @include display(flex);
-  @include justify-content(center);
+  display: flex;
+  width: 767px;
+  height: 0;
+  
 }
 
 .fb-page{

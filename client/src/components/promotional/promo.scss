@@ -6,9 +6,9 @@
   @include justify-content(center);
   @include align-self(center);
   width: 100vw;
-  height: 25rem;
+  height: 30rem;
   padding: 3rem 0;
-  background-image: url('/dist/public/images/backgrounds/freeTrial.jpg');
+  background-image: url('/public/images/backgrounds/freeTrial.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -19,6 +19,13 @@
   text-transform: uppercase;
   font-size: 2.2rem;
   text-align: center;
+  @media(min-width: 1920px){
+    font-size: 2.6rem;
+   }
+  @media(max-width: 425px){
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+    }
 }
 
 .promoBtn{

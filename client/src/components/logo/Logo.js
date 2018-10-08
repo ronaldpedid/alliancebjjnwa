@@ -8,7 +8,7 @@ export class LogoRegular extends Component {
     return (
 
       <figure>
-        <img className={style.regular} src="/dist/public/images/logos/alliance-blkwht.png" />
+        <img className={style.regular} src="/public/images/logos/alliance-blkwht.png" />
       </figure>
 
 

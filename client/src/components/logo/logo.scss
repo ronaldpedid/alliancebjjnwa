@@ -1,9 +1,19 @@
 .regular{
-  height: 6.5rem;
-  width: 8.75rem;
-  @media(max-width: 768px){
-    height: 4rem;
-    width: 4rem;
+  width: 12rem;
+  @media(min-width: 1920){
+    width: 12rem;
+    
+  }
+  @media (max-width: 1440px){
+    height: 100%;
+  }
+  @media(max-width: 767px){
+   
+    
+    
+  }
+  @media(max-width: 600px){
+    
     
     
   }

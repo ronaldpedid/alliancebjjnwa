@@ -30,6 +30,17 @@
   @include display(flex);
   @include flex-direction(row);
 }
+
+.landingClasses{
+  @extend .contentRow;
+  @media(max-width: 767px){
+    @include flex-direction(column);
+    margin: 0 auto;
+    
+  }
+}
+
+
 .contentColumn{
   @include display(flex);
   @include flex-direction(column);

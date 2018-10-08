@@ -1,0 +1,52 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+
+.missionContainer{
+  @extend .contentColumn;
+  width: 100%;
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
+  background-color: $site--color__black;
+  color: gray;
+  font-weight: 700;
+}
+
+.missionStatement{
+  max-width: 50%;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.4rem;
+  @media(min-width: 1920px){
+    font-size: 2.2rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  @media(max-width: 1919px){
+   font-size: 2rem;
+  }
+  @media(min-width: 1919px){
+    font-size: 2rem;
+   }
+   @media(max-width: 800px){
+    font-size: 1.6rem;
+    padding: 2rem 0;
+   }
+   @media(max-width: 600px){
+    font-size: 1.4rem;
+    padding: 2rem 0;
+   }
+  @media(max-width: 425px){
+    font-size: 1.3rem;
+    padding: 2rem 0;
+    text-align: left;
+    
+    }
+  @media(max-width: 425px){
+    font-size: 1rem;
+    padding: 2rem 0;
+    text-align: left;
+    
+    }
+}

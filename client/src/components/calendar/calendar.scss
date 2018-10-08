@@ -1,0 +1,82 @@
+@import '../../../src/flexbox.scss';
+@import '../../../src/client.scss';
+
+.calendarContainer{
+  display: flex;
+  height: 39rem;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  background-color: $site--color__gray;
+  color: $site--color__white;
+  width: 100%;
+  @media(min-width: 1920px){
+    height: 80rem;
+    font-size: 2rem;
+   }
+   @media(max-width: 1440px){
+    height: 70rem;
+    font-size: 1.8rem;
+   }
+  @media(max-width: 767px){
+    height: 65rem;
+    width: 100%;
+  }
+  @media (max-width: 425px){
+    font-size: .7rem;
+   
+  }
+}
+
+.calendarContentWrapper{
+  @include flex-direction(row);
+}
+.calendarHeader{
+  & h2{
+    border-bottom: .2rem solid $site--color__white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  margin-bottom: 1rem;
+ 
+}
+
+.calendarRow{
+  @extend .contentRow;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.info{
+  padding-top: .3rem;
+  @media(max-width: 767px){
+    padding-top: .6rem;
+    align-self: center;
+  }
+}
+
+.additionalInfo{
+  @extend .info;
+  margin: 1.2rem 0;
+   & h3{
+    border-top: .2rem solid $site--color__white;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.day{
+  align-self: flex-start;
+  @media(max-width: 767px){
+    display: none;
+  }
+}
+
+.hours{
+ align-self: flex-start;
+ @media(max-width: 767px){
+  display: none;
+}
+}

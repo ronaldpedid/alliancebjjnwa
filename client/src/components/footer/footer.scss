@@ -11,13 +11,23 @@
   background-color: $site--color__lightGray;
   color: $site--color__black;
   padding: 2rem 0;
+  @media(min-width: 1920px){
+    font-size: 2.5rem;
+   }
+   @media(max-width: 1919px){
+    font-size: 2.3rem;
+   }
+  @media(max-width: 1440px){
+    font-size: 2.2rem;
+   }
+   
   @media(max-width: 1024px){
     @include flex-direction(column);
     @include justify-content(center);
     padding: 0;
   }
   @media(max-width: 767px){
-    font-size: 1rem;
+    font-size: 1.6rem;
     text-align: center;
   }
 }
@@ -70,8 +80,20 @@
   .copyrightCopy{
     text-align: center;
     color: $site--color__white;
+    @media(min-width: 1920px){
+      font-size: 2rem;
+     }
+    @media(max-width: 1919px){
+      font-size: 2rem;
+     }
+     @media(max-width: 1440px){
+      font-size: 2rem;
+     }
     @media(max-width: 767px){
-      font-size: smaller;
+      font-size: 1.6rem;
+    }
+    @media(max-width: 600px){
+      font-size: 1.4rem;
     }
     
   }
@@ -82,7 +104,10 @@ h5.btn{
   text-align: center;
   width: 40%;
   margin: 1rem auto;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  @media(max-width: 1440px){
+    font-size: 1.5rem;
+   }
   @media(max-width: 1024px){
     @include flex-direction(column);
     @include justify-content(center);
@@ -94,8 +119,11 @@ h5.btn{
     @include flex-direction(column);
     @include justify-content(center);
     margin:1rem auto;
-    font-size: 1rem;
+    font-size: 1.6rem;
     width: 15%;
+  }
+  @media(max-width: 320px){
+    font-size: 1.3rem;
   }
 }
 
@@ -103,6 +131,11 @@ h5.btn{
   margin: .3rem 0;
 }
 
+.addressPanel h3{
+  @media(max-width: 425px){
+    margin: 2rem 0;
+  }
+}
 .contactHeader{
   @media(max-width: 1024px){
     margin-top: 1rem;

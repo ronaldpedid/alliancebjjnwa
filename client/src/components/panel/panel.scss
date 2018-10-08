@@ -6,10 +6,7 @@
   @include flex-direction(row);
   @include justify-content(center);
   width: 50vw;
-  height:25rem;  
-  @media(min-width: 768px){
-    @include flex-direction(row);
-  }
+  height:35rem;  
   @media(max-width: 767px){
     @include flex-direction(column);
   }
@@ -23,26 +20,32 @@
   @include align-self(center);
   text-align: center;
   font-size: 2rem;
+  h6{
+    font-size: 2rem;
+  }
+  @media(min-width: 1920px){
+    font-size: 2.6rem;
+   }
 }
 
 .panelContainerAdult,
 .panelContainerAdultHover,
 .panelContainerKid,
 .panelContainerKidHover{
-  @media(max-width: 768px){
+  @media(max-width: 767px){
     width: 100vw;
   }
 }
 
 .panelContainerAdult{
 @extend .panelContainer;
-background-image: url('/dist/public/images/backgrounds/adultNohover.jpg');
+background-image: url('/public/images/backgrounds/adultNohover.jpg');
 background-size: cover;
 }
 
 .panelContainerAdultHover{
   @extend .panelContainer;
-  background-image: url('/dist/public/images/backgrounds/adultHover.jpg');
+  background-image: url('/public/images/backgrounds/adultHover.jpg');
   background-size: cover;
   color: $site--color__white;
   border:none;
@@ -55,30 +58,34 @@ background-size: cover;
 .panelContainerKid{
   @extend .panelContainer;
   @extend .panelContainerAdult;
-  background-image: url('/dist/public/images/backgrounds/kidNohover.jpg');
+  background-image: url('/public/images/backgrounds/kidNohover.jpg');
  
 }
 
 .panelContainerKidHover{
   @extend .panelContainer;
   @extend .panelContainerAdultHover;
-  background-image: url('/dist/public/images/backgrounds/kidHover.jpg');
+  background-image: url('/public/images/backgrounds/kidHover.jpg');
 }
 
 .infoPanel{
   @extend .panel;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  @media(min-width: 1920px){
+    font-size: 2rem;
+  }
   
 
-  &p{
+  & p{
     text-transform: none;
     margin: .1rem .4rem;
     
   }
   .signup{
     text-transform: uppercase;
-    padding-top: .5rem;
+    padding-top: 1rem;
     font-size: 1.4rem;
+  
   }
 }
 
@@ -86,13 +93,31 @@ background-size: cover;
   @extend .green;
   font-size: 2rem;
   margin-bottom: 1rem;
+  @media(min-width: 1920px){
+    font-size: 2.3rem;
+   }
 }
 
 .infoBody{
   margin-bottom: 1.3rem;
+  @media(min-width: 1920px){
+    font-size: 2rem;
+   }
 }
 
 h6.btn{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-weight: 300;
+  font-size: 2rem;
+  @media(min-width: 1920px){
+    font-size: 2.2rem;
+   }
+   @media(max-width: 1440px){
+    font-size: 2.2rem;
+   }
+   @media(max-width: 767px){
+    font-size: 1.8rem;
+   }
+   
 }
+
