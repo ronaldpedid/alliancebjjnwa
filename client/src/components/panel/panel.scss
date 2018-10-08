@@ -74,6 +74,10 @@ background-size: cover;
   @media(min-width: 1920px){
     font-size: 2rem;
   }
+  @media(max-width: 600px){
+    font-size: 1.6rem;
+  }
+
   
 
   & p{
@@ -103,6 +107,9 @@ background-size: cover;
   @media(min-width: 1920px){
     font-size: 2rem;
    }
+   @media(max-width: 600px){
+    font-size: 1.6rem;
+  }
 }
 
 h6.btn{

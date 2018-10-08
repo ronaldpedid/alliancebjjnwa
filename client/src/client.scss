@@ -27,17 +27,15 @@ html{
   width: 100%;
   font-size: 62.5%;
   box-sizing: border-box;
-
-
+  overflow-x: hidden;
 }
 
 body{
   height: 100%;
   width: 100%;
-  
   overflow-x: hidden;
   font-family: $copy--font__oswald;
-  
+
 }
 
 a{
