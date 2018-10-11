@@ -19,7 +19,7 @@ class InstructorLuis extends Component {
           <h2 className={style.headerTitle}>Head Instructor</h2>
 
           <p className={style.bio}>
-            Professor Luis Rubalcava is a Brazilian Jiu-Jitsu baclk belt instructor. Certified and recognized by the
+            Professor Luis Rubalcava is a Brazilian Jiu-Jitsu black belt instructor. Certified and recognized by the
             International Brazilian Jiu-Jitsu Federation(IBJJF). Luis is a 3x Pan Am gold medalist and also recieved a gold metal
             at the Abu Dhabi invitational. He is an American Cup absolute winner. Luis received his black belt from Alliance's Romero
             "Jacare" Cavalcante. Luis has been training since 1999 and has trained with some of the legends are the sport: Marcelo Garcia,
