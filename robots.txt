@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
-Disallow: /contact
-Disallow: /classes
+allow: /
+allow: /contact
+allow: /classes
