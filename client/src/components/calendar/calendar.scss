@@ -22,7 +22,10 @@
     height: 65rem;
     width: 100%;
   }
-  @media (max-width: 425px){
+  @media(max-width: 568px){
+    font-size: 1.4rem;
+  }
+  @media (max-width: 500px){
     font-size: 1.2rem;
   }
 }
@@ -41,6 +44,9 @@
  
 }
 
+.calendarContent{
+
+}
 .calendarRow{
   @extend .contentRow;
   width: 100%;
