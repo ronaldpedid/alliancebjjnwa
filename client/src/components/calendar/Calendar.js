@@ -55,7 +55,7 @@ export class Calendar extends Component {
               <h3 className={style.info}>6:00pm - 8:00pm</h3>
             </div>
             <div className={style.calendarRow}>
-              <h3 className={style.info}>Women's Self Defense Class</h3>
+              <h3 className={style.info}>Womens Self Defense Class</h3>
               <h3 className={style.info}>6:00pm - 7:00pm</h3>
             </div>
             <div className={style.calendarRow}>
