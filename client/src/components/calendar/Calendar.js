@@ -24,7 +24,7 @@ export class Calendar extends Component {
             </div>
             <div className={style.calendarRow}>
               <h3 className={style.info}>Tuesday Executive Class</h3>
-              <h3 className={style.info}>6:15am - 7:15pm</h3>
+              <h3 className={style.info}>6:15am - 7:15am</h3>
             </div>
             <div className={style.calendarRow}>
               <h3 className={style.info}>Tuesday Kids Gi</h3>
@@ -44,7 +44,7 @@ export class Calendar extends Component {
             </div>
             <div className={style.calendarRow}>
               <h3 className={style.info}>Thursday Executive Class</h3>
-              <h3 className={style.info}>6:15am - 7:15pm</h3>
+              <h3 className={style.info}>6:15am - 7:15am</h3>
             </div>
             <div className={style.calendarRow}>
               <h3 className={style.info}>Thursday Kids No Gi</h3>
