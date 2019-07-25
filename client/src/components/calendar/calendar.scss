@@ -3,7 +3,7 @@
 
 .calendarContainer{
   display: flex;
-  height: 40.1rem;
+  height: auto;
   padding: 1rem 0;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,7 @@
 }
 
 .calendarContent{
-
+  
 }
 .calendarRow{
   @extend .contentRow;
@@ -81,10 +81,62 @@
     display: none;
   }
 }
+.calendarColumnsRow{
+  display: flex;
+  flex-direction: row
+}
+.calendarHeadings{
+  display: flex;
+  flex-direction: row;
+  margin-left: 241px;
+  align-items: flex-end;
+  line-clamp: 1;
+}
 
+.schedule{
+  font-size: 8rem;
+  text-transform: uppercase;
+
+}
 .hours{
  align-self: flex-start;
  @media(max-width: 767px){
   display: none;
 }
+}
+.calendarDay{
+  font-size: 2.25rem;
+  margin: 2rem 3.2rem;
+  padding: 2rem 5rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+
+}
+
+.calendarTime{
+  display: flex;
+  font-weight: 700;
+  font-size:  2.46rem;
+  width: auto;
+  margin: .2rem;
+  padding: 2rem 4rem;
+  line-height: 1.225;
+  justify-content: flex-end;
+}
+
+.calendarEvents{
+  display: flex;
+  flex-direction: row;
+  // margin-left: 150px;
+}
+.calendarEvent{
+  content: '';
+  text-transform: uppercase;
+  background-color: darkgray;
+  font-size: 1.8rem;
+  margin: .2rem .275rem .5rem .2rem;
+  padding: 2rem 4.25rem;
+  border-left: 1px solid white;
+  text-align: center;
+
 }
