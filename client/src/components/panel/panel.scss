@@ -39,13 +39,13 @@
 
 .panelContainerAdult{
 @extend .panelContainer;
-background-image: url('/public/images/backgrounds/adultNohover.jpg');
+background-image: url('https://res.cloudinary.com/the-sage-mages/image/upload/v1565392712/alliance%20pics/adultNohover.jpg');
 background-size: cover;
 }
 
 .panelContainerAdultHover{
   @extend .panelContainer;
-  background-image: url('/public/images/backgrounds/adultHover.jpg');
+  background-image: url('https://res.cloudinary.com/the-sage-mages/image/upload/v1565392713/alliance%20pics/adultHover.jpg');
   background-size: cover;
   color: $site--color__white;
   border:none;
@@ -62,14 +62,14 @@ background-size: cover;
 .panelContainerKid{
   @extend .panelContainer;
   @extend .panelContainerAdult;
-  background-image: url('/public/images/backgrounds/kidNohover.jpg');
+  background-image: url('https://res.cloudinary.com/the-sage-mages/image/upload/v1565392712/alliance%20pics/kidNohover.jpg');
  
 }
 
 .panelContainerKidHover{
   @extend .panelContainer;
   @extend .panelContainerAdultHover;
-  background-image: url('/public/images/backgrounds/kidHover.jpg');
+  background-image: url('https://res.cloudinary.com/the-sage-mages/image/upload/v1565392712/alliance%20pics/kidHover.jpg');
 }
 
 .infoPanel{

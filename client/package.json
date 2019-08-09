@@ -16,7 +16,7 @@
   "author": "Ronald J. Pedid",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-polyfill": "^6.26.0",
     "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
@@ -44,6 +44,6 @@
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.22.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.6"
+    "webpack-dev-server": "^3.8.0"
   }
 }

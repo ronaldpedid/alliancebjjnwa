@@ -8,7 +8,7 @@ export class LogoRegular extends Component {
     return (
 
       <figure>
-        <img className={style.regular} src="/public/images/logos/alliance-blkwht.png" />
+        <img className={style.regular} src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565393139/alliance%20pics/alliance-blkwht.png" />
       </figure>
 
 
