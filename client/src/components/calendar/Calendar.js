@@ -11,24 +11,11 @@ export class Calendar extends Component {
     return (
       <div className={style.calendarContainer}>
         <div className={style.calendarContentWrapper}>
-          <Media query="(max-width: 399px)">
-            {matches =>
-              matches ? (
-                <div id="res">
-                  <img className="res-image" src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565611502/A-schedulemobile350.png" alt="alliance nwa schedule" />
-                </div>
-              ) : (
-                  <div id="res">
-                    <img className="res-image" src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565140660/A-schedule.png" alt="alliance nwa schedule" />
-                  </div>
-                )
-            }
-          </Media>
           <Media query="(max-width: 599px)">
             {matches =>
               matches ? (
                 <div id="res">
-                  <img className="res-image" src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565217905/A-schedulemobile.png" alt="alliance nwa schedule" />
+                  <img className="res-image" src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565611502/A-schedulemobile350.png" alt="alliance nwa schedule" />
                 </div>
               ) : (
                   <div id="res">
