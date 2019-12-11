@@ -118,9 +118,7 @@ export class Instructor extends Component {
 
         <InstructorLuis />
         <InstructorAdam />
-        <InstructorTim />
         <InstructorMike />
-        <InstructorSteven />
 
         <div className={style.classRow}>
           <GreenKidPanel />

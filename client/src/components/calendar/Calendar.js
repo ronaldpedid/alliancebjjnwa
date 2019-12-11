@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import style from './calendar.scss';
 import Media from 'react-media';
+
 export class Calendar extends Component {
   makeKey(index) {
     let random1 = ['1', 'b', 'q', 's', '8', '90', 'qw'];

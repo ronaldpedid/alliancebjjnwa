@@ -11,9 +11,7 @@
   margin: 0 auto;
 
   @media(max-width: 425px){
-    margin-top: 1rem;
-    
-    
+    margin-top: 1rem; 
   }
   
 }
@@ -79,14 +77,17 @@
 iframe{
   display: flex;
 }
+
 .fb-wrapper{
   display: flex;
   width: 767px;
   height: 0;
-  
+  max-width: 300px;
+  min-width: 300px; 
 }
 
 .fb-page{
   width: 100%;
   height: 100%;
+  
 }
