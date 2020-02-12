@@ -13,10 +13,8 @@ export class Header extends Component {
             <h1 className={style.nwaLarge}>N<span className={style.wht}>ORTH</span> W<span className={style.wht}>EST</span> A<span className={style.wht}>RKANSAS</span></h1>
             <h1 className={style.nwa}>NWA</h1>
           </div>
-
         </div>
         <div className={style.address}>
-          <TimeStampHeader />
           <LoginButton />
         </div>
       </div>
@@ -26,15 +24,16 @@ export class Header extends Component {
 
 const TimeStampHeader = () => {
   return (
-    <h4><span className={style.timeStamp}>OPEN</span> MONDAY TO THURSDAY 5PM TO 8PM</h4>
+    <h4></h4>
   )
 }
 
 
 const LoginButton = () => {
   return (
-    <a className={style.loginBtn} href="https://l.facebook.com/l.php?u=https%3A%2F%2Falliancebjjofnwa.kicksite.net%2Fcheckin%2Flogin&h=AT2w3OfYJ7dgJeujcL8frkmK5YwDye9npLO1cHiiOpvd7owdZ1KpTX-qC0DVJDPsggYzNoqSSLqWsV7nAxl0ip9F3yDSi5r6yv8_DP9dp2AhgWP3CVN90sqnSAO8yH44eWigeA5BcAh1BkJyn8U" target="_blank"><h6 className={style.loginBtn}>
-      Member Login
+    <a className={style.loginBtn} href="https://l.facebook.com/l.php?u=https%3A%2F%2Falliancebjjofnwa.kicksite.net%2Fcheckin%2Flogin&h=AT2w3OfYJ7dgJeujcL8frkmK5YwDye9npLO1cHiiOpvd7owdZ1KpTX-qC0DVJDPsggYzNoqSSLqWsV7nAxl0ip9F3yDSi5r6yv8_DP9dp2AhgWP3CVN90sqnSAO8yH44eWigeA5BcAh1BkJyn8U" target="_blank">
+      <h6 className={style.loginBtn}>
+        Member Login
   </h6></a>
   )
 }

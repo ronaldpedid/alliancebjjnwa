@@ -44,7 +44,6 @@ export class Navigation extends Component {
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="http://www.allianceofficial.com/jiu-jitsu" target="_blank">About Jiu Jitsu</a></li>
-                    <li><Link to="/classes">Instructors & Classes</Link></li>
                     <li><Link to="/contact">Reach Out</Link></li>
                     <li><a href="https://stormalliancekimonos.com/" target="_blank">Alliance Wear</a></li>
                 </ul>
@@ -77,7 +76,6 @@ export class Navigation extends Component {
                     <div className={style.bar}></div>
                     <div className={style.bar}></div>
                 </button>
-
             </nav>
         )
     }

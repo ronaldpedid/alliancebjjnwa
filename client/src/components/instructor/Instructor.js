@@ -129,7 +129,7 @@ export class Instructor extends Component {
 
         <Footer />
 
-      </div >
+      </div>
     );
   }
 }

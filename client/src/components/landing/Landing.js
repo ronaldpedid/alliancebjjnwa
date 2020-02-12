@@ -8,7 +8,6 @@ import { AdultPanel } from '../panel/Adults';
 import { KidPanel } from '../panel/Kids';
 import { Promo } from '../promotional/Promo';
 import { Footer } from '../footer/Footer';
-import { Social } from '../social/Social';
 import { MissionStatement } from '../mission/Mission';
 
 
@@ -20,12 +19,8 @@ export class Landing extends Component {
         <Navigation />
         <Hero />
         <MissionStatement />
-        <div className={style.landingClasses}>
-          <KidPanel />
-          <AdultPanel />
-        </div>
+        <AdultPanel />
         <Promo />
-        <Social />
         <Footer />
       </div>
     );

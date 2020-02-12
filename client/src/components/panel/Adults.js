@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from './panel.scss';
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,11 +11,6 @@ export class GreenAdultPanel extends Component {
         <div className={style.panel}>
           <div className={style.infoPanel}>
             <h6 className={style.infoHeader}>ADULT COURSES</h6>
-            <div className={style.infoBody}>
-              <p>6:15am-7:15am-Tues & Thurs</p>
-              <p>6pm-8pm Mon-Wed Gi</p>
-              <p>6pm-8pm Thurs Nogi</p>
-            </div>
             <p className={style.lato}>Learn to defend yourself, develop confidence and improve fitness.</p>
             <a href="/contact" >
               <h6 className={style.btn}>Sign Up</h6>
@@ -48,22 +44,13 @@ export class AdultPanel extends React.Component {
   }
 
   render() {
-
     return (
-      <div
-        onMouseEnter={this.handleMouseHover}
-        onMouseLeave={this.handleMouseHover}>
+      <div>
         <div className={style.panelContainerAdult}>
-          {this.state.showOriginal &&
-
-            <div className={style.panel}>
-              <h4 className={style}>ADULT COURSES</h4>
-              <h6 className={style.green}>LEARN MORE</h6></div>}
-
-          {this.state.isHovering &&
-            <GreenAdultPanel />}
+          <div className={style.panel}>
+            <Link to="/dist/public/images/backgrounds/Schedule.pdf" target="_blank" download><h4 className={style.infoHeader}>Download Schedule</h4></Link>
+          </div>
         </div>
-
       </div>
     )
   }

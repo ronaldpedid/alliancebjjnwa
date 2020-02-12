@@ -28,7 +28,7 @@ export class Calendar extends Component {
                   <img className="res-image" src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565611502/A-schedulemobile350.png" alt="alliance nwa schedule" />
                 </div>
               ) : (
-                  <div id="res">
+                  <div id="res1">
                     <img className="res-image" src="https://res.cloudinary.com/the-sage-mages/image/upload/v1565140660/A-schedule.png" alt="alliance nwa schedule" />
                   </div>
                 )

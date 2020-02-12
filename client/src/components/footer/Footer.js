@@ -22,9 +22,9 @@ export class Footer extends React.Component {
           </div>
         </div>
         <div className={style.copyrightPanel}>
-          <h4 className={style.copyrightCopy}>Alliance Jiu-Jitsu Association. 2016 All rights reserved.</h4>
+          <h4 className={style.copyrightCopy}>Alliance Jiu-Jitsu Association. &copy; 2020 All rights reserved.</h4>
         </div>
-      </div >
+      </div>
     )
   }
 }
