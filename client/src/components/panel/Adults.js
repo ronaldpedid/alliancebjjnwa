@@ -48,6 +48,8 @@ export class AdultPanel extends React.Component {
       <div>
         <div className={style.panelContainerAdult}>
           <div className={style.panel}>
+            <h2>Drop in and start learning</h2>
+            <br />
             <Link to="/dist/public/images/backgrounds/Schedule.pdf" target="_blank" download><h4 className={style.infoHeader}>Download Schedule</h4></Link>
           </div>
         </div>
