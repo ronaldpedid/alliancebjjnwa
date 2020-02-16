@@ -1,14 +1,13 @@
 
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
 const keys = require('./keys/keys');
 
 const app = express();
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
 
 
 app.post('/api/form', (req, res) => {
@@ -35,10 +34,8 @@ app.post('/api/form', (req, res) => {
 })
 
 
-
 let PORT = 8000;
 let PORT_ENV = process.env.PORT;
-
 
 /* production only */
 if (process.env.NODE_ENV === 'production') {

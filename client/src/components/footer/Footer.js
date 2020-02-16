@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import style from './footer.scss';
 
 
@@ -18,7 +18,6 @@ export class Footer extends React.Component {
             <h3 className={style.contactHeader}>Contact Us</h3>
             <h5>479-402-4914</h5>
             <h5>alliancebjjofnwa@gmail.com</h5>
-            <a href="http://www.allianceofficial.com/filiais-alliance-jiu-jitsu" target="_blank"><h5 className={style.btn}>View All Affilates</h5></a>
           </div>
         </div>
         <div className={style.copyrightPanel}>

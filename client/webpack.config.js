@@ -38,6 +38,25 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+            {
+                loader: 'style-loader',
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true,
+                    importLoaders: 1,
+                },
+            },
+            {
+                loader: 'resolve-url-loader',
+            }
+        ],
+    },
+      {
         test: /\.scss$/,
         use: [
           { loader: "style-loader" },
