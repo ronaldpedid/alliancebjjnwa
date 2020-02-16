@@ -158,7 +158,7 @@ main {
   font-size: 120%;
   padding: .75em 0;
   background-color: gold;
-  border-bottom: 1px solid black);
+  border-bottom: 1px solid black;
 }
 
 .calendar .body .cell {
