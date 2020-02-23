@@ -1,151 +1,68 @@
 @import '../../../src/flexbox.scss';
 @import '../../../src/client.scss';
 
-.calendarContainer{
-  display: flex;
-  height: auto;
-  padding: 1rem 0;
-  justify-content: center;
-  align-items: center;
-  background-color: $site--color__gray;
-  color: $site--color__white;
-  width: 100%;
-  // @media(min-width: 1920px){
-  //   height: 80rem;
-  //   font-size: 2rem;
-  //  }
-  //  @media(max-width: 1440px){
-  //   height: 70rem;
-  //   font-size: 1.6rem;
-  //  }
-  // @media(max-width: 767px){
-  //   height: 65rem;
-  //   width: 100%;
-  // }
-  // @media(max-width: 568px){
-  //   font-size: 1.4rem;
-  // }
-  // @media(max-width: 500px){
-  //   font-size: 1.2rem;
-  // }
-  // @media(max-width: 440px){
-  //   font-size: 1.1rem;
-  // }
-  
+$dsBtn: yellow;
+/*ranks */
+
+
+
+.calWrapper{
+  padding: 5rem 2rem;
+  height: 185%;
+  background: #000;
 }
 
-.calendarContentWrapper{
-  // @include flex-direction(row);
-  // width: 80%;
+.calContentWrapper{
+  text-align: center;
 }
-.calendarHeader{
-  & h2{
-    border-bottom: .2rem solid $site--color__white;
-    padding: 1rem;
-    text-align: center;
-    width: 100%;
+
+
+.calButtonWrapper{
+  display: flex;
+background: transparent;
+justify-content: center;
+}
+
+.borderLine{
+  border: 2px solid white;
+  width: 50%;
+  height: 0;
+  align-self: center;
+}
+
+.allyBtn{
+  background-color: transparent;
+  border: 2px solid $dsBtn;
+  margin: 0 2rem;
+   width: 20%; 
+@media (max-width: 1200px){
+  flex-flow: column;
+  justify-content: space-around;
+  align-self: flex-start;
+  margin-right: 2em;
+  width: 40%;
   }
-  margin-bottom: 1rem;
  
 }
 
-.calendarContent{
-  
-}
-.calendarRow{
-  @extend .contentRow;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 1rem;
-}
-
-.info{
-  padding-top: .3rem;
-  @media(max-width: 767px){
-    padding-top: .6rem;
-    align-self: center;
-  }
-}
-
-.additionalInfo{
-  @extend .info;
-  margin: 1.2rem 0;
-   & h3{
-    border-top: .2rem solid $site--color__white;
-    padding: 1rem;
-    text-align: center;
-  }
-}
-
-.day{
+.calRow{
+  display: flex;
+  justify-content: space-around;
   align-self: flex-start;
-  @media(max-width: 767px){
-    display: none;
+  
+@media (max-width: 1200px){
+  flex-flow: column;
+  justify-content: space-around;
+  align-self: flex-start;
+  margin-right: 2em;
   }
 }
-.calendarColumnsRow{
-  display: flex;
-  flex-direction: row
-}
-.calendarHeadings{
-  display: flex;
-  flex-direction: row;
-  margin-left: 241px;
-  align-items: flex-end;
-  line-clamp: 1;
+
+.classHeader{
+color: $dsBtn;
+margin: 2rem 0;
 }
 
-.schedule{
-  font-size: 8rem;
-  text-transform: uppercase;
-
-}
-.hours{
- align-self: flex-start;
- @media(max-width: 767px){
-  display: none;
-}
-}
-.calendarDay{
-  font-size: 2.25rem;
-  margin: 2rem 3.2rem;
-  padding: 2rem 5rem;
-  text-transform: uppercase;
-  border-bottom: 2px solid white;
-
-}
-
-.calendarTime{
-  display: flex;
-  font-weight: 700;
-  font-size:  2.46rem;
-  width: auto;
-  margin: .2rem;
-  padding: 2rem 4rem;
-  line-height: 1.225;
-  justify-content: flex-end;
-}
-
-.calendarEvents{
-  display: flex;
-  flex-direction: row;
-  // margin-left: 150px;
-}
-.calendarEvent{
-  content: '';
-  text-transform: uppercase;
-  background-color: darkgray;
-  font-size: 1.8rem;
-  margin: .2rem .275rem .5rem .2rem;
-  padding: 2rem 4.25rem;
-  border-left: 1px solid white;
-  text-align: center;
-
-}
-
-#res{
-  @media screen and (max-width: 425px) {
-    width: 80%;
-    max-width: 100%;
-  }
+.classCopy{
+  font-weight: 100;
 }

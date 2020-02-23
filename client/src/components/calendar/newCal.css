@@ -25,12 +25,12 @@
 /* VARIABLES */
 
 :root {
-  --main-color: #1a8fff;
-  --text-color: #777;
+  --main-color: transparent;
+  --text-color: #fff;
   --text-color-light: #ccc;
-  --border-color: #eee;
-  --bg-color: #f9f9f9;
-  --neutral-color: #fff;
+  --border-color: transparent;
+  --bg-color: #030303;
+  --neutral-color: #000;
 }
 
 
@@ -42,9 +42,9 @@
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.9em;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--text-color);
     background: var(--bg-color);
     position: relative;
@@ -86,6 +86,8 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  flex: 1;
+  justify-content: center;
 }
 
 .row-middle {
@@ -94,8 +96,10 @@ main {
 
 .col {
   flex-grow: 1;
-  flex-basis: 0;
+  flex-basis: 1;
   max-width: 100%;
+  padding-left: 10px;
+  margin-right: 20px;
 }
 
 .col-start {
@@ -104,9 +108,11 @@ main {
 }
 
 .col-center {
-  justify-content: center;
-  text-align: center;
-}
+  justify-content: flex-start;
+  text-align: left;
+  border-bottom: 2px solid white;
+  max-width: 15%;
+} 
 
 .col-end {
   justify-content: flex-end;
@@ -121,7 +127,7 @@ main {
   position: relative;
   width: 100%;
   background: var(--neutral-color);
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
 }
 
 .calendar .header {
@@ -129,7 +135,7 @@ main {
   font-weight: 700;
   font-size: 115%;
   padding: 1.5em 0;
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
 }
 
 .calendar .header .icon {
@@ -157,8 +163,9 @@ main {
   color: black;
   font-size: 120%;
   padding: .75em 0;
-  background-color: gold;
-  border-bottom: 1px solid black;
+  color: white;
+  text-align: left;
+  /* border-bottom: 2px solid white; */
 }
 
 .calendar .body .cell {
@@ -169,6 +176,7 @@ main {
   cursor: pointer;
   background: var(--neutral-color);
   transition: 0.25s ease-out;
+  margin: 1em;
 }
 
 .calendar .body .cell:hover {
@@ -177,9 +185,9 @@ main {
 }
 
 .calendar .body .selected {
-  border-left: 10px solid transparent;
-  border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
-  border-image-slice: 1;
+  /* border-left: 10px solid transparent; */
+  /* border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%); */
+  /* border-image-slice: 1; */
 }
 
 .calendar .body .row {
@@ -199,8 +207,9 @@ main {
   font-size: 92.5%;
   line-height: 1;
   top: .75em;
-  right: .75em;
+  left: .75em;
   font-weight: 700;
+  display: none;
 }
 
 .calendar .body .disabled {
@@ -211,7 +220,6 @@ main {
 .calendar .body .cell .bg {
   font-weight: 700;
   line-height: 1;
-  color: var(--main-color);
   opacity: 0;
   font-size: 8em;
   position: absolute;
@@ -227,26 +235,34 @@ main {
 }
 
 .calendar .body .col {
-  flex-grow: 0;
-  flex-basis: calc(100%/7);
-  width: calc(100%/7);
+  flex-grow: 1;
+  flex-basis: calc(100%/8);
+  width: calc(100%/6);
+}
+
+.header-underline{
+  border-bottom: 2px solid white;
+  margin-right: 20px;
+  margin-bottom: 1em;
 }
 
 .schedule--wrapper{
   display:flex;
-  padding-top: 2em;
   flex-flow: column wrap;
-  align-self: flex-end;
-
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1em;
 }
+
+
 
 .schedule--item{
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-self: flex-start;
-  padding-right: 1em;
-  padding-left: 1em;
+
 
 }
 
@@ -256,7 +272,21 @@ main {
 
 .schedule--dates{
   font-weight: 800;
-  color: #051b5e;
+  color: yellow;
   align-self: flex-end;
+
+}
+
+.schedule--dates_t{
+    font-weight: 800;
+    color: orangered;
+    align-self: flex-end;
+
+  
+}
+.schedule--dates_a{
+    font-weight: 800;
+    color: green;
+    align-self: flex-end;
 
 }

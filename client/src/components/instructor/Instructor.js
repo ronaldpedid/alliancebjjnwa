@@ -6,7 +6,6 @@ import { Navigation } from '../navigation/Navigation';
 import { Footer } from '../footer/Footer';
 import { GreenAdultPanel } from '../panel/Adults';
 import { GreenKidPanel } from '../panel/Kids';
-import { Calendar } from '../calendar/Calendar';
 
 class InstructorLuis extends Component {
   render() {
@@ -125,7 +124,6 @@ export class Instructor extends Component {
           <GreenAdultPanel />
         </div>
 
-        <Calendar />
 
         <Footer />
 

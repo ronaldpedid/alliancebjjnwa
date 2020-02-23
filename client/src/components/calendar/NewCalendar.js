@@ -1,43 +1,25 @@
 import React from "react";
 import * as dateFns from "date-fns";
 import './newCal.css';
+import styles from './calendar.scss';
 
 class Calendar extends React.Component {
     constructor() {
         super();
         this.state = {
             currentMonth: new Date(),
+            currentWeek: new Date(),
             selectedDate: new Date()
         };
         this.onDateClick = this.onDateClick.bind(this);
-        this.nextMonth = this.nextMonth.bind(this);
-        this.prevMonth = this.prevMonth.bind(this);
 
-    }
 
-    renderHeader() {
-        const dateFormat = "MMMM yyyy";
-
-        return (
-            <div className="header row flex-middle">
-                <div className="col col-start">
-                    <div className="icon" onClick={this.prevMonth}>
-                        chevron_left
-          </div>
-                </div>
-                <div className="col col-center">
-                    <h2>{dateFns.format(this.state.currentMonth, dateFormat)}</h2>
-                </div>
-                <div className="col col-end" onClick={this.nextMonth}>
-                    <div className="icon">chevron_right</div>
-                </div>
-            </div>
-        );
     }
 
     renderDays() {
         const dateFormat = "iiii";
         const days = [];
+        console.log('days: ', days);
 
         let startDate = dateFns.startOfWeek(this.state.currentMonth);
 
@@ -47,6 +29,10 @@ class Calendar extends React.Component {
                     {dateFns.format(dateFns.addDays(startDate, i), dateFormat)}
                 </div>
             );
+            if(i === 0){
+                days.pop();
+            }
+            
         }
 
         return <div className="days row">{days}</div>;
@@ -61,12 +47,13 @@ class Calendar extends React.Component {
     Monday() {
         return (
             <div className="schedule--wrapper">
+                <h1 className="header-underline">Monday</h1>
                 <h4 className="schedule--item">Intermediate <span className="schedule--dates">6a - 7a</span></h4>
                 <h4 className="schedule--item">Intermediate <span className="schedule--dates">
                     12p - 1p
                  </span>
                 </h4>
-                <h4 className="schedule--item">Teenager <span className="schedule--dates">
+                <h4 className="schedule--item">Teenager <span className="schedule--dates_t">
                     5:30p - 6:30p
                  </span>
                 </h4>
@@ -74,7 +61,7 @@ class Calendar extends React.Component {
                     Beginner
                     <span className="schedule--dates"> 6:30p - 7:30p</span>
                 </h4>
-                <h4 className="schedule--item">Advance <span className="schedule--dates">
+                <h4 className="schedule--item">Advance <span className="schedule--dates_a">
                     7:30p - 9p
                  </span>
                 </h4>
@@ -83,6 +70,8 @@ class Calendar extends React.Component {
     Tuesday() {
         return (
             <div className="schedule--wrapper">
+                                <h1 className="header-underline">Tuesday</h1>
+
                 <h4 className="schedule--item">Beginner
                 <span className="schedule--dates">
 
@@ -96,7 +85,7 @@ class Calendar extends React.Component {
                 </span>
                 </h4>
                 <h4 className="schedule--item">Kids
-                <span className="schedule--dates">
+                <span className="schedule--dates_t">
 
                         5:15p - 6:00p
                 </span>
@@ -119,12 +108,14 @@ class Calendar extends React.Component {
     Wednesday() {
         return  (
             <div className="schedule--wrapper">
+                                <h1 className="header-underline">Wednesday</h1>
+
                 <h4 className="schedule--item">Intermediate <span className="schedule--dates">6a - 7a</span></h4>
                 <h4 className="schedule--item">Intermediate <span className="schedule--dates">
                     12p - 1p
                  </span>
                 </h4>
-                <h4 className="schedule--item">Teenager <span className="schedule--dates">
+                <h4 className="schedule--item">Teenager <span className="schedule--dates_t">
                     5:30p - 6:30p
                  </span>
                 </h4>
@@ -132,7 +123,7 @@ class Calendar extends React.Component {
                     Beginner
                     <span className="schedule--dates"> 6:30p - 7:30p</span>
                 </h4>
-                <h4 className="schedule--item">Advance <span className="schedule--dates">
+                <h4 className="schedule--item">Advance <span className="schedule--dates_a">
                     7:30p - 9p
                  </span>
                 </h4>
@@ -141,6 +132,8 @@ class Calendar extends React.Component {
     Thursday() {
         return (
             <div className="schedule--wrapper">
+                                <h1 className="header-underline">Thursday</h1>
+
                 <h4 className="schedule--item">Beginner
                 <span className="schedule--dates">
 
@@ -154,7 +147,7 @@ class Calendar extends React.Component {
                 </span>
                 </h4>
                 <h4 className="schedule--item">Kids
-                <span className="schedule--dates">
+                <span className="schedule--dates_t">
 
                         5:15p - 6:00p
                 </span>
@@ -176,18 +169,20 @@ class Calendar extends React.Component {
     Friday() {
         return (
             <div className="schedule--wrapper">
+                                <h1 className="header-underline">Friday</h1>
+
                 <h4 className="schedule--item">No Gi <span className="schedule--dates">
 
                     6a - 7a
                     </span>
                 </h4>
-                <h4 className="schedule--item">No Gi Advanced <span className="schedule--dates">
+                <h4 className="schedule--item">No Gi Advanced <span className="schedule--dates_a">
 
                     12p - 1p
                     </span>
                 </h4>
                 <h4 className="schedule--item">
-                    Teenager <span className="schedule--dates">
+                    Teenager <span className="schedule--dates_t">
 
                         5:30p - 6:30p
                         </span>
@@ -197,7 +192,7 @@ class Calendar extends React.Component {
                     6:30p - 7:30p
                     </span>
                 </h4>
-                <h4 className="schedule--item">No Gi Advanced <span className="schedule--dates">
+                <h4 className="schedule--item">No Gi Advanced <span className="schedule--dates_a">
 
                     7:30p - 9:00p
                     </span>
@@ -207,6 +202,8 @@ class Calendar extends React.Component {
     Saturday() {
         return (
             <div className="schedule--wrapper">
+                                <h1 className="header-underline">Saturday</h1>
+
                 <h4 className="schedule--item">Beginner <span className="schedule--dates">
 
                     10a - 11a
@@ -217,12 +214,12 @@ class Calendar extends React.Component {
                     11a - 12:30p
                     </span>
                 </h4>
+                
             </div>)
     }
     appendEventsToDates(day) {
         switch (this.getFirstThree(day)) {
-            case "Sun":
-                return <div>No Class</div>
+
             case "Mon":
                 return this.Monday();
             case "Tue":
@@ -240,21 +237,29 @@ class Calendar extends React.Component {
         }
     }
     renderCells() {
-        const { currentMonth, selectedDate } = this.state;
+        const { currentMonth, selectedDate, currentWeek } = this.state;
         const monthStart = dateFns.startOfMonth(currentMonth);
         const monthEnd = dateFns.endOfMonth(monthStart);
-        const startDate = dateFns.startOfWeek(monthStart);
-        const endDate = dateFns.endOfWeek(monthEnd);
+
+        const weekStart = dateFns.startOfWeek(currentWeek);
+        const weekEnd = dateFns.endOfWeek(weekStart);
+
+
+        const startDateW = dateFns.startOfWeek(weekStart);
+        const endDateW = dateFns.endOfWeek(weekEnd);
 
         const dateFormat = "d";
         const rows = [];
 
         let days = [];
-        let day = startDate;
+        let day = startDateW;
+        console.log('day: ', day);
+        
         let formattedDate = "";
 
-        while (day <= endDate) {
+        while (day <= endDateW) {
             for (let i = 0; i < 7; i++) {
+          
                 formattedDate = dateFns.format(day, dateFormat);
                 const cloneDay = day;
 
@@ -273,6 +278,9 @@ class Calendar extends React.Component {
                         <span className="bg">{formattedDate}</span>
                     </div>
                 );
+                if(this.getFirstThree(day) === "Sun"){
+                    days.pop();
+                }
                 day = dateFns.addDays(day, 1);
             }
             rows.push(
@@ -282,6 +290,7 @@ class Calendar extends React.Component {
             );
             days = [];
         }
+
         return <div className="body">{rows}</div>;
     }
 
@@ -291,24 +300,28 @@ class Calendar extends React.Component {
         });
     };
 
-    nextMonth() {
-        this.setState({
-            currentMonth: dateFns.addMonths(this.state.currentMonth, 1)
-        });
-    };
-
-    prevMonth() {
-        this.setState({
-            currentMonth: dateFns.subMonths(this.state.currentMonth, 1)
-        });
-    };
-
     render() {
         return (
-            <div className="calendar">
-                {this.renderHeader()}
-                {this.renderDays()}
-                {this.renderCells()}
+            <div className={styles.calWrapper}>
+                <div className={styles.calContentWrapper}>
+                    <h1 className={styles.classHeader}>CLASS SCHEDULE</h1>
+                    <h3 className={styles.classCopy}>All classes are taught by Gullihemre "Gi" Augusto Sores</h3>
+                    <h3 className={styles.classCopy}>Kids Classes are ages: 5 - 12 | Teenager Classes are ages: 12 - 17</h3>
+                    <h3 className={styles.classCopy}>Beginner: All Ranks  |  Intermediate: 2 Degree White Belt and Up | Advanced: Blue Belt and Up</h3>
+                </div>
+       
+                <div className={styles.calRow}>
+                    {this.Monday()}
+                    {this.Tuesday()}
+                    {this.Wednesday()}
+                    {this.Thursday()}
+                    {this.Friday()}
+                    {this.Saturday()}
+                </div>
+
+                <div className={styles.calButtonWrapper}>
+                    <span className={styles.borderLine} /><button className={styles.allyBtn}>Download Schedule</button><span className={styles.borderLine} />
+                </div>
             </div>
         );
     }
