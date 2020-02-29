@@ -1,146 +1,58 @@
 @import '../../../src/flexbox.scss';
 @import '../../../src/client.scss';
 
+.footer{
+  background-color: $site--color__yellow;
+  font-weight: 100;
+  color: black;
+  height: auto;
+}
+
 .footerContainer{
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(space-around);
-  @include align-items(center);
-  width: 100%;
-  font-size: 1.4rem;
-  background-color: $site--color__lightGray;
-  color: $site--color__black;
-  padding: 2rem 0;
-  @media(min-width: 1920px){
-    font-size: 2.5rem;
-   }
-   @media(max-width: 1919px){
-    font-size: 2.3rem;
-   }
-  @media(max-width: 1440px){
-    font-size: 2.2rem;
-   }
-   
-  @media(max-width: 1024px){
-    @include flex-direction(column);
-    @include justify-content(center);
-    padding: 0;
-  }
-  @media(max-width: 767px){
-    font-size: 1.6rem;
-    text-align: center;
-  }
+  display: flex;
+  flex-flow: column;
 }
-
-.iFrameBorder{
-  border: none;
- 
-}
-
-
 
 .mapPanel{
-  margin-left: 5%;
+  width: 100vw;
 }
 
-.addressPanel, .contactPanel{
-  text-align: center;
-}
-
-.addressPanel{
-  @include align-items(start);
-  margin-right: 1%;
-  @media(max-width: 1024px){
-    @include flex-direction(column);
-    @include justify-content(center);
-    padding: 0;
+.footerLinks{
+  margin: 4rem;
+  &:last-child{
+    margin-bottom: 1rem;
   }
-  
+}
+.contactGroup{
+  margin: auto 0;
 }
 .contactPanel{
-  width: 20%;
-  margin-right: 5%;
-  @media(max-width: 1024px){
-    @include flex-direction(column);
-    @include justify-content(center);
-    margin-right: 0;
-  }
-  @media(max-width: 767px){
-    width: 100%;
-    margin-right: 0;
-  }
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.pipeRow{
+  display: flex;
+  text-transform: uppercase;
+  justify-content: flex-start;
+  font-size: larger;
+  margin: 0 6rem 6rem;
+}
+
+.logoBig{
+  height: 250px;
+
+}
+.pipe{
+  margin: 0 1rem;
+  color: white;
+}
+
+.block{
+    padding: 5px 15px;
+    margin: 2rem;
+    background-color: #000;
   
-}
-
-.copyrightPanel{
-  font-size: 1rem;
-  font-weight: 300;
-  padding: .5rem 0;
-  background-color: $site--color__black;
-  .copyrightCopy{
-    text-align: center;
-    color: $site--color__white;
-    @media(min-width: 1920px){
-      font-size: 2rem;
-     }
-    @media(max-width: 1919px){
-      font-size: 2rem;
-     }
-     @media(max-width: 1440px){
-      font-size: 2rem;
-     }
-    @media(max-width: 767px){
-      font-size: 1.6rem;
-    }
-    @media(max-width: 600px){
-      font-size: 1.4rem;
-    }
-    
-  }
-}
-
-h5.btn{
-  margin-top: .6rem;
-  text-align: center;
-  width: 40%;
-  margin: 1rem auto;
-  font-size: 1.6rem;
-  @media(max-width: 1440px){
-    font-size: 1.5rem;
-   }
-  @media(max-width: 1024px){
-    @include flex-direction(column);
-    @include justify-content(center);
-    margin:1.1rem auto;
-    font-size: 1.3rem;
-    width: 80%;
-  }
-  @media(max-width: 767px){
-    @include flex-direction(column);
-    @include justify-content(center);
-    margin:1rem auto;
-    font-size: 1.6rem;
-    width: 15%;
-  }
-  @media(max-width: 600px){
-    font-size: 1.1rem;
-  }
-  @media(max-width: 320px){
-    font-size: 1.1rem;
-  }
-}
-
-.contactPanel h4, .addressPanel h4{
-  margin: .3rem 0;
-}
-
-.addressPanel h3{
-  @media(max-width: 425px){
-    margin: 2rem 0;
-  }
-}
-.contactHeader{
-  @media(max-width: 1024px){
-    margin-top: 1rem;
-  }
 }

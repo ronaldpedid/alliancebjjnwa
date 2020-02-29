@@ -1,7 +1,8 @@
 import React from "react";
 import * as dateFns from "date-fns";
-import './newCal.css';
-import styles from './calendar.scss';
+import './newCal.scss';
+import style from './calendar.scss';
+import { Link } from "react-router-dom";
 
 class Calendar extends React.Component {
     constructor() {
@@ -29,10 +30,10 @@ class Calendar extends React.Component {
                     {dateFns.format(dateFns.addDays(startDate, i), dateFormat)}
                 </div>
             );
-            if(i === 0){
+            if (i === 0) {
                 days.pop();
             }
-            
+
         }
 
         return <div className="days row">{days}</div>;
@@ -70,7 +71,7 @@ class Calendar extends React.Component {
     Tuesday() {
         return (
             <div className="schedule--wrapper">
-                                <h1 className="header-underline">Tuesday</h1>
+                <h1 className="header-underline">Tuesday</h1>
 
                 <h4 className="schedule--item">Beginner
                 <span className="schedule--dates">
@@ -106,9 +107,9 @@ class Calendar extends React.Component {
     }
 
     Wednesday() {
-        return  (
+        return (
             <div className="schedule--wrapper">
-                                <h1 className="header-underline">Wednesday</h1>
+                <h1 className="header-underline">Wednesday</h1>
 
                 <h4 className="schedule--item">Intermediate <span className="schedule--dates">6a - 7a</span></h4>
                 <h4 className="schedule--item">Intermediate <span className="schedule--dates">
@@ -132,7 +133,7 @@ class Calendar extends React.Component {
     Thursday() {
         return (
             <div className="schedule--wrapper">
-                                <h1 className="header-underline">Thursday</h1>
+                <h1 className="header-underline">Thursday</h1>
 
                 <h4 className="schedule--item">Beginner
                 <span className="schedule--dates">
@@ -169,7 +170,7 @@ class Calendar extends React.Component {
     Friday() {
         return (
             <div className="schedule--wrapper">
-                                <h1 className="header-underline">Friday</h1>
+                <h1 className="header-underline">Friday</h1>
 
                 <h4 className="schedule--item">No Gi <span className="schedule--dates">
 
@@ -202,7 +203,7 @@ class Calendar extends React.Component {
     Saturday() {
         return (
             <div className="schedule--wrapper">
-                                <h1 className="header-underline">Saturday</h1>
+                <h1 className="header-underline">Saturday</h1>
 
                 <h4 className="schedule--item">Beginner <span className="schedule--dates">
 
@@ -214,7 +215,7 @@ class Calendar extends React.Component {
                     11a - 12:30p
                     </span>
                 </h4>
-                
+
             </div>)
     }
     appendEventsToDates(day) {
@@ -254,12 +255,12 @@ class Calendar extends React.Component {
         let days = [];
         let day = startDateW;
         console.log('day: ', day);
-        
+
         let formattedDate = "";
 
         while (day <= endDateW) {
             for (let i = 0; i < 7; i++) {
-          
+
                 formattedDate = dateFns.format(day, dateFormat);
                 const cloneDay = day;
 
@@ -278,7 +279,7 @@ class Calendar extends React.Component {
                         <span className="bg">{formattedDate}</span>
                     </div>
                 );
-                if(this.getFirstThree(day) === "Sun"){
+                if (this.getFirstThree(day) === "Sun") {
                     days.pop();
                 }
                 day = dateFns.addDays(day, 1);
@@ -302,15 +303,15 @@ class Calendar extends React.Component {
 
     render() {
         return (
-            <div className={styles.calWrapper}>
-                <div className={styles.calContentWrapper}>
-                    <h1 className={styles.classHeader}>CLASS SCHEDULE</h1>
-                    <h3 className={styles.classCopy}>All classes are taught by Gullihemre "Gi" Augusto Sores</h3>
-                    <h3 className={styles.classCopy}>Kids Classes are ages: 5 - 12 | Teenager Classes are ages: 12 - 17</h3>
-                    <h3 className={styles.classCopy}>Beginner: All Ranks  |  Intermediate: 2 Degree White Belt and Up | Advanced: Blue Belt and Up</h3>
+            <div className={style.calWrapper}>
+                <div className={style.calContentWrapper}>
+                    <h1 className={style.classHeader}>CLASS SCHEDULE</h1>
+                    {/* <h3 className={style.classCopy}>All classes are taught by Gullihemre "Gi" Augusto Sores</h3> */}
+                    <h3 className={style.classCopy}>Kids Classes are ages: 5 - 12 | Teenager Classes are ages: 12 - 17</h3>
+                    <h3 className={style.classCopy}>Beginner: All Ranks  |  Intermediate: 2 Degree White Belt and Up | Advanced: Blue Belt and Up</h3>
                 </div>
-       
-                <div className={styles.calRow}>
+
+                <div className={style.calRow}>
                     {this.Monday()}
                     {this.Tuesday()}
                     {this.Wednesday()}
@@ -319,8 +320,12 @@ class Calendar extends React.Component {
                     {this.Saturday()}
                 </div>
 
-                <div className={styles.calButtonWrapper}>
-                    <span className={styles.borderLine} /><button className={styles.allyBtn}>Download Schedule</button><span className={styles.borderLine} />
+                <div className={style.calButtonWrapper}>
+                    <span className={style.borderLine} />
+                    <Link to="/dist/public/images/backgrounds/Schedule.pdf" target="_blank" download>
+                     <button className={style.allyBtn}>Download Schedule</button>                      
+                    </Link>
+                    <span className={style.borderLine} />
                 </div>
             </div>
         );

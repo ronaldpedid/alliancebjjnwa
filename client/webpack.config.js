@@ -18,10 +18,7 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, loader: 'babel', }
     ]
-  }
-};
-
-module.exports = {
+  },
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -39,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
+        include: /node_modules/,
         use: [
           {
             loader: 'style-loader',
@@ -47,8 +44,8 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
-              importLoaders: 1,
+              sourceMap: false,
+              importLoaders: 2,
             },
           },
           {
@@ -66,7 +63,7 @@ module.exports = {
               modules: true,
               importLoaders: 1,
               localIdentName: "[name]_[local]_[hash:base64]",
-              sourceMap: true,
+              sourceMap: false,
               minimize: true
             },
 

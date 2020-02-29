@@ -6,7 +6,7 @@
 $site--color__gray: #393D42;
 $site--color__lightGray: #f2f3f4;
 $site--color__black: #1C1C1B;
-$site--color__yellow: #FACC05;
+$site--color__yellow: #FCB016;
 $site--color__green: #019c7D;
 $site--color__white: #ffffff;
 $site--color__red: #FF0000;
@@ -46,7 +46,7 @@ a{
 button{
   @include display(block);
   cursor: pointer;
-  background-color: $site--color__green;
+  background-color: $site--color__yellow;
   color: $site--color__white;
   font-weight: 700;
   font-family: $copy--font__oswald;
@@ -58,7 +58,7 @@ button{
     opacity: .8;
   }
   &:active{
-    background-color: $site--color__green;
+    background-color: $site--color__yellow;
   }
   &:link{
     background-color: transparent;
@@ -77,10 +77,13 @@ button{
 }
 
 .green{
-  color:$site--color__green;
+  color:$site--color__yellow;
 }
 
 .hide{
   display: none;
 }
 
+#smartwaiver_floater{
+  background: #FCB016;
+}

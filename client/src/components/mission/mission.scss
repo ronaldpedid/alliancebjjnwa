@@ -1,18 +1,25 @@
 @import '../../../src/flexbox.scss';
 @import '../../../src/client.scss';
 
+.hrule{
+  width: 100vw;
+  border-color: indianred;
+}
 
 .missionContainer{
   @extend .contentColumn;
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   justify-content: center;
   align-items: center;
-  background-color: $site--color__black;
-  color: gray;
+  background-color: black;
+  color: #fff;
   font-weight: 700;
 }
 
+.missionHeader{
+  color: #FCB016
+}
 .missionStatement{
   max-width: 50%;
   text-align: center;

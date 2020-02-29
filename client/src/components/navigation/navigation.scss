@@ -6,86 +6,42 @@
   @include flex-direction(row);
   width: 100%;
   font-size: 2rem;
-  background-color: $site--color__black;
-  padding: .5rem 0;
+  padding: .23rem 0;
   text-transform: uppercase;
-  @media(min-width: 1920px){
-    font-size: 2.3rem;
-    
-  }
-  @media(max-width: 1440px){
-    font-size: 1.6rem;
-    
-  }
-  @media(max-width: 767px){
-    font-size: 1.5rem;
-    justify-content: center;
-  }
-  
-  @media(max-width: 530px){
-    font-size: 1.2rem;
-    justify-content: center;
-  }
-  @media(max-width: 425px){
-    font-size: 1rem;
-    justify-content: center;
-  }
-  @media(max-width: 320px){
-    font-size: .5rem;
-    justify-content: center;
-  }
-  a{
-    color: $site--color__white;
-    text-decoration: none;
-    &:hover, &:active{
-      color: $site--color__green;
-    }
-  }
-  ul{
-    @include display(flex);
-    @include flex-direction(row);
-    list-style-type: none;
-    margin-left: 5%;
-    li{
-      margin: 0 1rem;
-      
-    }
-  }
 }
 
-.navigationContainerOpened{
+.xGunna{
+  height: 1.2rem;
+}
+
+.bars{
+font-size: 8rem;
+}
+
+.linksInner{
   @include display(flex);
   @include flex-direction(column);
-  position: absolute;
+  text-transform: lowercase;
+  width: 100vw;
+  position: absolute; 
+  background-color: $site--color__gray;
   left: 0;
-  top: 0;
+  text-align: right; 
+  padding-top: 2rem;
   font-size: 2rem;
-  background-color: $site--color__green;
-  color: $site--color__white;
-  padding: 1rem;
-  border-bottom-right-radius: 5%;
-  box-shadow: .3rem .3rem .3rem $site--color__black;
-  width: 100%;
-  & li:hover{
-    color: $site--color__yellow;
-  }
-}
-.navigationContainerHamburger{
-  position: absolute;
-  left: 0;
-  top: 0;
-  
+
+
 }
 
-.closeMenu{
-  text-align: center;
-  background-color: $site--color__yellow;
-  margin-bottom: 1rem;
-  width: 25%;
-  
+.iconStyle{
+  font-size: 8rem;
+   color: #FCB016;
 }
-.bar{
-  border-bottom: .2rem solid $site--color__white;
-  height: .3rem;
-  width: 1.2rem;
+.navLink{
+  font-weight: 100;
+  padding-right: 15rem;
+  cursor: pointer;
+  &:hover{
+    background: $site--color__yellow;
+  }
 }
