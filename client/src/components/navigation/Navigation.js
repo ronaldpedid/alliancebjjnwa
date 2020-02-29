@@ -25,10 +25,10 @@ export class Navigation extends Component {
 
                     {open && (
                         <div className={style.linksInner}>
-                              <h1 className={style.navLink}>Home</h1>
-                              <h1 className={style.navLink}>About</h1>
-                              <h1 className={style.navLink}>Contact</h1>
-                              <h1 className={style.navLink}>Free Trial</h1>
+                             <Link to="/"> <h1 className={style.navLink}>Home</h1></Link>
+                              <Link to="about"><h1 className={style.navLink}>About</h1></Link>
+                              <Link to="contact"><h1 className={style.navLink}>Contact</h1></Link>
+                              <Link to=""><h1 className={style.navLink}>Free Trial</h1></Link>
                         </div>
                     )}
 

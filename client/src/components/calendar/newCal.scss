@@ -240,13 +240,13 @@ main {
   width: calc(100%/6);
 }
 
-.header-underline{
+.headerUnderline{
   border-bottom: 2px solid white;
   margin-right: 20px;
   margin-bottom: 1em;
 }
 
-.schedule--wrapper{
+.scheduleWrapper{
   display:flex;
   flex-flow: column wrap;
   align-self: flex-start;
@@ -257,7 +257,7 @@ main {
 
 
 
-.schedule--item{
+.scheduleItem{
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -266,25 +266,23 @@ main {
 
 }
 
-.schedule--item:hover{
-  font-size: larger;
-}
 
-.schedule--dates{
+
+.scheduleDates{
   font-weight: 800;
   color: #FCB016;
   align-self: flex-end;
 
 }
 
-.schedule--dates_t{
+.scheduleDatesT{
     font-weight: 800;
     color: orangered;
     align-self: flex-end;
 
   
 }
-.schedule--dates_a{
+.scheduleDatesA{
     font-weight: 800;
     color: green;
     align-self: flex-end;

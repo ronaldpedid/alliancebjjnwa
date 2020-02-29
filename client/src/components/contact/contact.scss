@@ -21,11 +21,14 @@
 
 .input{
   border: none;
-  border-bottom: 1px solid $site--color__green;
+  margin-top: 2.5rem;
+
   width: 22rem;
+  background-color:  $site--color__yellow;
   font-size: 1.3rem;
   font-family: $copy--font__lato;
   padding-left: .1rem;
+  padding: 1rem;
 
   :placeholder-shown{
     padding: 2px;
@@ -48,8 +51,8 @@
 .inputMessage{
   @extend .input;
   width: 100%;
-  height: 16rem;
-  border: 1px solid $site--color__yellow;
+  height: 13rem;
+  background-color:  $site--color__yellow;
   @media(min-width: 1920px){
     height: 50rem;
   }

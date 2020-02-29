@@ -43,18 +43,26 @@ export default class AllianceCarousel extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: 'relative' }}>
         {this.state.campaigns.map((data, index) => (
-          <div key={index + data.img} className={this.state.currentSlide !== index ? styles.hidden : styles.slideContainer}>
-            <img className={styles.figure} src={data.img} />
-            <h6 className={styles.copy}>{data.altText}</h6>
-            {this.state.showArrows ? <div className={styles.arrowBlock}>
-              <a className={styles.arrow} onClick={this.ChangeSlideMinus}> {'<'} </a>
-              <a className={styles.arrow} onClick={this.ChangeSlidePlus}> {'>'} </a>
-            </div> : ""}
-            {this.state.showDots ? <div className={styles.dotContainer}>{this.createDots()}</div> : ''}
+          <div key={index + data.img} className={this.state.currentSlide !== index ? styles.hidden : data.className}>
+
+            <div className={styles.copyBlock}>
+              <h3>{data.headline}</h3>
+              <p className={styles.copy}>{data.copy}</p>
+              <button className={styles.signupBtn}>Sign Up for a free lession</button>
+            </div>
+
+
+            {this.state.showDots && <div className={styles.dotContainer}>{this.createDots()}</div>}
           </div>
         ))}
+
+        {this.state.showArrows && <div className={styles.arrowBlock}>
+          <a className={styles.arrow} onClick={this.ChangeSlideMinus}> {'<'} </a>
+          <a className={styles.arrow} onClick={this.ChangeSlidePlus}> {'>'} </a>
+        </div>}
+
       </div>
     )
 

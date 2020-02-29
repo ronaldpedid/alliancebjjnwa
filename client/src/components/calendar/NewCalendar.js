@@ -1,6 +1,6 @@
 import React from "react";
 import * as dateFns from "date-fns";
-import './newCal.scss';
+import style1 from './newCal.scss';
 import style from './calendar.scss';
 import { Link } from "react-router-dom";
 
@@ -47,22 +47,22 @@ class Calendar extends React.Component {
 
     Monday() {
         return (
-            <div className="schedule--wrapper">
-                <h1 className="header-underline">Monday</h1>
-                <h4 className="schedule--item">Intermediate <span className="schedule--dates">6a - 7a</span></h4>
-                <h4 className="schedule--item">Intermediate <span className="schedule--dates">
+            <div className={style1.scheduleWrapper}>
+                <h1 className={style1.headerUnderline}>Monday</h1>
+                <h4 className={style1.scheduleItem}>Intermediate <span className={style1.scheduleDates}>6a - 7a</span></h4>
+                <h4 className={style1.scheduleItem}>Intermediate <span className={style1.scheduleDates}>
                     12p - 1p
                  </span>
                 </h4>
-                <h4 className="schedule--item">Teenager <span className="schedule--dates_t">
+                <h4 className={style1.scheduleItem}>Teenager <span className={style1.scheduleDatesT}>
                     5:30p - 6:30p
                  </span>
                 </h4>
-                <h4 className="schedule--item">
+                <h4 className={style1.scheduleItem}>
                     Beginner
-                    <span className="schedule--dates"> 6:30p - 7:30p</span>
+                    <span className={style1.scheduleDates}> 6:30p - 7:30p</span>
                 </h4>
-                <h4 className="schedule--item">Advance <span className="schedule--dates_a">
+                <h4 className={style1.scheduleItem}>Advance <span className={style1.scheduleDatesA}>
                     7:30p - 9p
                  </span>
                 </h4>
@@ -70,35 +70,36 @@ class Calendar extends React.Component {
     }
     Tuesday() {
         return (
-            <div className="schedule--wrapper">
-                <h1 className="header-underline">Tuesday</h1>
+            <div className={style1.scheduleWrapper}>
+                <h1 className={style1.headerUnderline}>Tuesday</h1>
 
-                <h4 className="schedule--item">Beginner
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner
+                <span className={style1.scheduleDates}>
 
-                        6a - 7a
+                6:00a - 7:00a
+
                 </span>
                 </h4>
-                <h4 className="schedule--item">Beginner
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner
+                <span className={style1.scheduleDates}>
 
                         12p - 1p
                 </span>
                 </h4>
-                <h4 className="schedule--item">Kids
-                <span className="schedule--dates_t">
+                <h4 className={style1.scheduleItem}>Kids
+                <span className={style1.scheduleDatesT}>
 
                         5:15p - 6:00p
                 </span>
                 </h4>
-                <h4 className="schedule--item">Intermediate
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Intermediate
+                <span className={style1.scheduleDates}>
 
                         6:00p - 7:00p
                 </span>
                 </h4>
-                <h4 className="schedule--item">Beginner
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner
+                <span className={style1.scheduleDates}>
 
                         7:30p - 8:30p
                 </span>
@@ -108,23 +109,24 @@ class Calendar extends React.Component {
 
     Wednesday() {
         return (
-            <div className="schedule--wrapper">
-                <h1 className="header-underline">Wednesday</h1>
+            <div className={style1.scheduleWrapper}>
+                <h1 className={style1.headerUnderline}>Wednesday</h1>
 
-                <h4 className="schedule--item">Intermediate <span className="schedule--dates">6a - 7a</span></h4>
-                <h4 className="schedule--item">Intermediate <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Intermediate <span className={style1.scheduleDates}>                    6:00a - 7:00a
+</span></h4>
+                <h4 className={style1.scheduleItem}>Intermediate <span className={style1.scheduleDates}>
                     12p - 1p
                  </span>
                 </h4>
-                <h4 className="schedule--item">Teenager <span className="schedule--dates_t">
+                <h4 className={style1.scheduleItem}>Teenager <span className={style1.scheduleDatesT}>
                     5:30p - 6:30p
                  </span>
                 </h4>
-                <h4 className="schedule--item">
+                <h4 className={style1.scheduleItem}>
                     Beginner
-                    <span className="schedule--dates"> 6:30p - 7:30p</span>
+                    <span className={style1.scheduleDates}> 6:30p - 7:30p</span>
                 </h4>
-                <h4 className="schedule--item">Advance <span className="schedule--dates_a">
+                <h4 className={style1.scheduleItem}>Advance <span className={style1.scheduleDatesA}>
                     7:30p - 9p
                  </span>
                 </h4>
@@ -132,35 +134,35 @@ class Calendar extends React.Component {
     }
     Thursday() {
         return (
-            <div className="schedule--wrapper">
-                <h1 className="header-underline">Thursday</h1>
+            <div className={style1.scheduleWrapper}>
+                <h1 className={style1.headerUnderline}>Thursday</h1>
 
-                <h4 className="schedule--item">Beginner
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner
+                <span className={style1.scheduleDates}>
 
-                        6a - 7a
+                6:00a - 7:00a
                 </span>
                 </h4>
-                <h4 className="schedule--item">Beginner
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner
+                <span className={style1.scheduleDates}>
 
                         12p - 1p
                 </span>
                 </h4>
-                <h4 className="schedule--item">Kids
-                <span className="schedule--dates_t">
+                <h4 className={style1.scheduleItem}>Kids
+                <span className={style1.scheduleDatesT}>
 
                         5:15p - 6:00p
                 </span>
                 </h4>
-                <h4 className="schedule--item">Intermediate
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Intermediate
+                <span className={style1.scheduleDates}>
 
                         6:00p - 7:00p
                 </span>
                 </h4>
-                <h4 className="schedule--item">Beginner
-                <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner
+                <span className={style1.scheduleDates}>
 
                         7:30p - 8:30p
                 </span>
@@ -169,31 +171,31 @@ class Calendar extends React.Component {
     }
     Friday() {
         return (
-            <div className="schedule--wrapper">
-                <h1 className="header-underline">Friday</h1>
+            <div className={style1.scheduleWrapper}>
+                <h1 className={style1.headerUnderline}>Friday</h1>
 
-                <h4 className="schedule--item">No Gi <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>No Gi <span className={style1.scheduleDates}>
 
-                    6a - 7a
+                    6:00a - 7:00a
                     </span>
                 </h4>
-                <h4 className="schedule--item">No Gi Advanced <span className="schedule--dates_a">
+                <h4 className={style1.scheduleItem}>No Gi Advanced <span className={style1.scheduleDatesA}>
 
-                    12p - 1p
+                    12p - 1:00p
                     </span>
                 </h4>
-                <h4 className="schedule--item">
-                    Teenager <span className="schedule--dates_t">
+                <h4 className={style1.scheduleItem}>
+                    Teenager <span className={style1.scheduleDatesT}>
 
                         5:30p - 6:30p
                         </span>
                 </h4>
-                <h4 className="schedule--item">Beginner <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner <span className={style1.scheduleDates}>
 
                     6:30p - 7:30p
                     </span>
                 </h4>
-                <h4 className="schedule--item">No Gi Advanced <span className="schedule--dates_a">
+                <h4 className={style1.scheduleItem}>No Gi Advanced <span className={style1.scheduleDatesA}>
 
                     7:30p - 9:00p
                     </span>
@@ -202,15 +204,15 @@ class Calendar extends React.Component {
     }
     Saturday() {
         return (
-            <div className="schedule--wrapper">
-                <h1 className="header-underline">Saturday</h1>
+            <div className={style1.scheduleWrapper}>
+                <h1 className={style1.headerUnderline}>Saturday</h1>
 
-                <h4 className="schedule--item">Beginner <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Beginner <span className={style1.scheduleDates}>
 
                     10a - 11a
                     </span>
                 </h4>
-                <h4 className="schedule--item">Intermediate <span className="schedule--dates">
+                <h4 className={style1.scheduleItem}>Intermediate <span className={style1.scheduleDates}>
 
                     11a - 12:30p
                     </span>

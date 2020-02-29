@@ -8,9 +8,11 @@
   width: 100%;
   height: auto;
   padding: 5rem;
-  background-color:$site--color__gray;
   color: $site--color__white;
   font-weight: 300;
+  @media (max-width: 1200px){
+    justify-content: space-between;
+  }
 }
 
 .bold{
@@ -27,7 +29,6 @@
 }
 
 .navContainer{
-  // justify-content: flex-end;
   margin-right: 5%;
 }
 

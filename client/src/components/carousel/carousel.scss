@@ -7,60 +7,15 @@
     align-items: center;
     margin: 0 auto;
     color: #eab53b;
- 
-   
-    .figure{ //controls the width and height of the image
-      border: .7em solid white;
-      box-shadow: 1px 1px 12px 1px rgba(black, 0.6);
-      align-self: center;
-      @media screen and (min-width:1024px){
+    @media screen and (min-width:1024px){
         width: 930px;
         height: 420px;
       }
-
-      
-    }
-    
-    .copy{
-     align-self: center;
-     text-align: left;
-     margin: 3rem 3rem 1rem;
-     font-size: .9rem;
-     @media(min-width: 600px){
-       font-size: 1.1rem;
-     }
-     @media(min-width: 1024px){
-       font-size: 1.4rem;
-     }
-    }
-    
-    .arrowBlock{
-      position: absolute;
-      top: 75%;
-      z-index: 9999;
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-      @media(min-width: 600px){
-        top: 74%;
-      }
-      @media(min-width: 768px){
-        top: 83%;
-      }
-      @media(min-width: 900px){
-        top: 30%;
-        padding: 0 15%;
-      }
    
-    }
-  
-    .arrow{
-      font-weight: 100;
-      font-size: 5em;
-      cursor: pointer;
-    }
-  
+
+
+    
+
     .dotContainer{
       display: flex;
       flex-direction: row;
@@ -85,3 +40,81 @@
   .hidden{
     display: none;
   }
+
+  .arrowBlock{
+    position: absolute;
+    top: 75%;
+    z-index: 9999;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    @media(min-width: 600px){
+      top: 74%;
+    }
+    @media(min-width: 768px){
+      top: 83%;
+    }
+    @media(min-width: 900px){
+      top: 30%;
+      padding: 0 18%;
+    }
+ 
+  }
+
+
+  .signupBtn{
+    border:2px solid #eab53b;
+    background-color: transparent;
+    font-size: larger;
+    margin-left: 2%;
+  }
+  .copyBlock{
+      color: #fff;
+    align-self: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: .9rem;
+    margin-left: 7%;
+    width: 300px;
+    @media(min-width: 600px){
+      font-size: 1.1rem;
+    }
+    @media(min-width: 1024px){
+      font-size: 1.6rem;
+    }
+   }
+
+   .copy{
+       margin: 3rem 0;
+   }
+
+
+
+  .arrow{
+    font-weight: 100;
+    font-size: 5em;
+    cursor: pointer;
+  }
+
+   .pic{
+    @extend .slideContainer;
+    background-position: center;
+    background-size: cover;     
+   }   
+  .pic1{
+    @extend .pic;
+    background-image: url('https://res.cloudinary.com/https-jungapi-herokuapp-com-public/image/upload/v1582490858/Alliance/carousel1_dswzim.png');
+
+
+   }
+  .pic2{
+    @extend .pic;
+    background-image: url('https://res.cloudinary.com/https-jungapi-herokuapp-com-public/image/upload/v1582490859/Alliance/carousel2_auvz2n.png');
+
+   }
+  .pic3{
+    @extend .pic;
+    background-image: url('https://res.cloudinary.com/https-jungapi-herokuapp-com-public/image/upload/v1582490859/Alliance/carousel3_tzznj2.png');
+
+   }

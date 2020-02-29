@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import style from './contact.scss';
 import { Header } from '../header/Header';
-import { Navigation } from '../navigation/Navigation';
 import { Footer } from '../footer/Footer';
 import PropTypes from 'prop-types';
 import axios from 'axios';
@@ -28,42 +27,41 @@ class ContactForm extends Component {
           <form onSubmit={handleSubmit} className={style.contactForm} >
             <div className={style.formColumn}>
               <div className={style.contentColumn}>
-                <label className={style.label}>Name</label>
                 <input
                   type="text"
                   name="name"
+                  placeholder="Full Name"
                   className={nameErr ? style.error : style.input}
                   onChange={handleChange}
                   value={name}
                 />
               </div>
               <div id={style.email} className={style.contentColumn}>
-                <label className={style.label}>Email</label>
                 <input
                   type="email"
                   name="email"
+                  placeholder="Email Address"
                   className={emailErr ? style.error : style.input}
                   onChange={handleChange}
                   value={email}
                 />
               </div>
               <div className={style.contentColumn}>
-                <label className={style.label}>Phone Number</label>
                 <input
                   type="number"
                   name="phone"
                   className={phoneErr ? style.error : style.input}
-                  placeholder="(555)555-5352"
+                  placeholder="Phone Number"
                   onChange={handleChange}
                   value={phone}
                 />
               </div>
             </div>
             <div className={style.contentColumn}>
-              <label className={style.label}>Message</label>
               <textarea
                 type="text"
                 name="message"
+                placeholder="Message for us"
                 className={messageErr ? style.errorMessage : style.inputMessage}
                 onChange={handleChange}
                 value={message}></textarea>
@@ -165,7 +163,6 @@ export class Contact extends Component {
     return (
       <div className={style.backgroundLanding}>
         <Header />
-        <Navigation />
         <ContactForm
           name={name}
           email={email}

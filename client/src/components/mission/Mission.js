@@ -14,7 +14,6 @@ export class MissionStatement extends Component {
                programs below.  
           </em></p>
         </div>
-        <hr className={style.hrule}></hr>
       </div>)
   }
 }
