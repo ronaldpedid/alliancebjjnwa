@@ -21,15 +21,15 @@
     "body-parser": "^1.19.0",
     "concurrently": "^3.6.1",
     "express": "^4.17.1",
-    "file-loader": "^2.0.0",
+    "file-loader": "^6.2.0",
     "method-override": "^3.0.0",
     "nodemailer": "^4.7.0",
     "nodemon": "^1.19.4",
     "sendgrid": "^5.2.3",
     "serve-static": "^1.14.1",
-    "url-loader": "^1.1.2"
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "image-webpack-loader": "^4.6.0"
+    "image-webpack-loader": "^8.1.0"
   }
 }
